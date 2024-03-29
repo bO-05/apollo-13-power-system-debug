@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "@types/node": "^20.11.30",
+    "next": "^14.1.4",
+    "nextra": "^2.13.4",
+    "nextra-theme-docs": "^2.13.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.4.3"
+  },
+  "name": "Apollo-with-lumentis",
+  "description": "This video delves into the intricate details of the Apollo 13 accident, focusing on the real-time debugging of the spacecraft's power system by the mission control team. By examining an actual Apollo Command Module inverter and analyzing the original schematics, the video provides a comprehensive understanding of the electrical system's design and the critical decisions made by the ground crew to save the mission.",
+  "version": "0.0.1",
+  "scripts": {
+    "devstart": "next dev -p 5656 & node start.js",
+    "dev": "next dev -p 5656",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [
+    "Apollo 13",
+    "Command Module",
+    "Power Systems",
+    "Fuel Cells",
+    "Inverters",
+    "Electrical Engineering",
+    "NASA",
+    "Spacecraft",
+    "Sy Liebergot",
+    "Gene Kranz"
+  ]
+}

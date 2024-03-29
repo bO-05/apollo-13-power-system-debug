@@ -1,0 +1,51 @@
+import { Callout, Steps, Step } from "nextra-theme-docs";
+
+# Debugging by Mission Control
+
+The mission control team, led by EECOM (Electrical, Environmental, and Consumables Manager) Sy Liebergot and Flight Director Gene Kranz, faced a daunting task in diagnosing and resolving the power system issues that arose during the Apollo 13 accident. Their expertise, teamwork, and quick decision-making were crucial in saving the mission and the lives of the astronauts.
+
+## Identifying the Problem
+
+In the initial moments after the accident, Sy Liebergot suspected that [Fuel Cell 1 and 3](/apollo-13-accident/loss-of-fuel-cells-ac-bus-2) were lost based on the telemetry data. However, confirming this suspicion proved challenging due to the loss of [AC Bus 2](/apollo-13-accident/loss-of-fuel-cells-ac-bus-2), which powered the oxygen tank pressure sensors.
+
+<Steps>
+### Step 1: Configuring Inverter 1 to Power Both AC Busses
+
+To regain insight into the oxygen tank pressures, EECOM and EPS (Electrical Power System) officers decided to configure [Inverter 1](/command-module-power-system/inverters) to power both AC Bus 1 and AC Bus 2. This move allowed them to read the pressure sensor data for Oxygen Tank 2.
+
+### Step 2: Discovering the Loss of Oxygen Tank 2
+
+Upon powering up AC Bus 2, the mission control team discovered that Oxygen Tank 2 pressure had dropped to a mere 19 PSI, far below its normal operating pressure of 900 PSI. This revelation confirmed that both oxygen tanks were lost, and the situation was dire.
+</Steps>
+
+## Conserving Power and Preparing for Contingencies
+
+Realizing the severity of the situation, Sy Liebergot and the mission control team took decisive actions to conserve power and prepare for the worst-case scenario.
+
+<Steps>
+### Step 1: Emergency Power-Down
+
+EECOM and EPS officers immediately requested an emergency power-down of non-critical systems to reduce the load on the remaining [Fuel Cell 2](/command-module-power-system/fuel-cells). This action bought valuable time to assess the situation and plan the next steps.
+
+### Step 2: Preparing for LM Lifeboat Procedures
+
+Anticipating the potential loss of all fuel cells, Sy Liebergot advised the TELMU (LM Telemetry, Electrical, and EVA Mobility Unit Officer) to prepare for an emergency power-up of the Lunar Module (LM) systems. The LM would serve as a lifeboat, providing life support and power for the crew's return to Earth.
+</Steps>
+
+## Utilizing Battery Power and Transferring to the LM
+
+As [Fuel Cell 2](/command-module-power-system/fuel-cells) continued to deteriorate, the mission control team had to make tough decisions to ensure a successful transfer of the crew to the LM.
+
+<Steps>
+### Step 1: Using Battery Power to Maintain Critical Systems
+
+Flight Director Glynn Lunney made the crucial decision to use the reentry batteries to maintain the Command Module's critical systems, such as the computer and inertial platform, during the transfer to the LM. This decision prioritized the successful transfer of navigation data over preserving battery power for reentry.
+
+### Step 2: Recharging Battery A using the LM Power Supply
+
+After the successful transfer to the LM, the mission control team devised an ingenious plan to recharge Battery A using a hacked procedure. They utilized a cable meant to recharge the LM batteries from the Command Module, but in reverse, involving hundreds of circuit breakers. This innovative solution ensured that the crew had sufficient battery power for reentry.
+</Steps>
+
+<Callout>
+The mission control team's exceptional problem-solving skills, teamwork, and ability to make critical decisions under immense pressure were instrumental in the successful return of the Apollo 13 crew. Their debugging efforts during the accident serve as a testament to the importance of expertise, preparedness, and adaptability in the face of unprecedented challenges.
+</Callout>

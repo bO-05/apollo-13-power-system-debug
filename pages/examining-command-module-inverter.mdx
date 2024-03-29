@@ -1,0 +1,33 @@
+import { Callout, Steps, Step } from "nextra-theme-docs";
+
+# Examining an Apollo Command Module Inverter
+
+In this section, we will take a closer look at an actual Apollo Command Module inverter, discussing its design, components, and potential issues. By examining this piece of hardware, we can gain a better understanding of the electrical system's complexity and the challenges faced by the mission control team during the Apollo 13 accident.
+
+The inverter in question is a Block I unit, which was used in the North American Aviation's boilerplate spacecraft, BP-14. This particular inverter has seen some amateur use and modifications, making it an interesting case study.
+
+## Inverter Design
+
+The Apollo Command Module inverters were designed to convert the 28V DC power from the fuel cells to 115V AC, 400Hz, 3-phase power for the spacecraft's systems. Three inverters were wedged under the communications equipment, conforming to the curved edge of the heat shield and laying upside down.
+
+The inverters were solid-state devices, utilizing thyristors (SCRs), a buck converter, and magnetic amplifiers. The final voltage conversion was achieved through rotating magnetic fields in a specially wound transformer, resulting in an efficient, albeit heavy, power unit due to the extensive use of magnetics.
+
+<Callout type="info">
+The Block II inverters, used in later Apollo missions, combined the input studs into circular connectors, simplifying the design compared to the Block I units.
+</Callout>
+
+## [Inverter Contamination](/examining-command-module-inverter/inverter-contamination)
+
+Upon opening the inverter, we discovered some alarming issues, including missing screws, loose nuts, and the presence of a strange, light material. Using an endoscope, we identified the substance as vermiculite, an insulating material likely added by a previous owner to "pot" the inverter, as it was not originally designed to be potted for flight.
+
+## [Capacitor Testing](/examining-command-module-inverter/capacitor-testing)
+
+Due to the inverter's contamination, we were limited in our ability to fully test and repair the unit. However, we performed spot checks on several capacitors to assess their condition. While most capacitors tested within acceptable ranges, we discovered one that had failed, reading only 65 nanofarads instead of its specified 68 microfarads.
+
+The presence of numerous capacitors throughout the inverter, combined with the discovery of the failed capacitor, led us to conclude that attempting to power up this particular unit would be unwise.
+
+<Callout type="warning">
+Attempting to use collectible Apollo inverters in aircraft or other applications without proper inspection, cleaning, and refurbishment by qualified personnel is not recommended, as it may lead to dangerous situations requiring the expertise of a team of ground controllers to resolve.
+</Callout>
+
+In the next sections, we will delve deeper into the [inverter contamination](/examining-command-module-inverter/inverter-contamination) and the process of [capacitor testing](/examining-command-module-inverter/capacitor-testing) to better understand the challenges faced when working with these historical components.

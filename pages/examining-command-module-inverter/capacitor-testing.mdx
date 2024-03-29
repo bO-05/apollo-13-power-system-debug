@@ -1,0 +1,46 @@
+import { Callout, Steps, Step } from "nextra-theme-docs";
+
+# Capacitor Testing
+
+Upon examining the Apollo Command Module inverter, the team decided to spot-check the capacitors to assess their condition and functionality. Capacitors are essential components in power systems, as they store and release electrical energy, helping to smooth out voltage fluctuations and filter unwanted noise.
+
+<Steps>
+
+### Step 1: Identify the capacitors
+
+The team inspected the inverter and identified various capacitors throughout the unit. They noted the capacitance values marked on each component, which ranged from a few microfarads to several hundred microfarads.
+
+### Step 2: Test the capacitors in-circuit
+
+Using a capacitance meter, the team tested several capacitors while they were still connected to the inverter's circuitry. This method allowed for a quick assessment of the capacitors' health without the need for desoldering.
+
+</Steps>
+
+The team found that most of the capacitors tested within their expected ranges:
+
+- A 3.8 µF capacitor measured 3.8 µF
+- A 12 µF capacitor measured 12 µF
+- A 100 µF capacitor measured 92 µF
+- A 550 µF capacitor measured 550 µF
+
+However, they encountered one capacitor that appeared to be faulty:
+
+<Callout type="warning">
+A capacitor marked as 68 µF measured only 2.5 µF when tested in-circuit. This significant deviation from the expected value suggested that the capacitor had deteriorated over time.
+</Callout>
+
+### Step 3: Test the suspicious capacitor out-of-circuit
+
+To confirm the findings, the team desoldered one end of the suspicious capacitor and tested it again. The results were even more concerning:
+
+- The capacitor marked as 68 µF measured only 65 nF (0.065 µF) when tested out-of-circuit.
+
+This measurement confirmed that the capacitor had failed and was no longer functioning as intended.
+
+<Callout type="danger">
+The discovery of a single failed capacitor was enough for the team to conclude that the inverter was not suitable for further testing or operation. With numerous capacitors throughout the unit, the likelihood of additional failures was high, making the inverter unreliable and potentially dangerous.
+</Callout>
+
+The capacitor testing process highlighted the importance of thorough inspections and testing when working with vintage electronics, especially those used in critical applications like the Apollo spacecraft. While the team's examination of the inverter was cut short due to the discovered issues, the findings provided valuable insights into the challenges of maintaining and restoring complex electrical systems from the Apollo era.
+
+For more information on the Apollo Command Module's power system, see the [Apollo Command Module Power System](/command-module-power-system) section. To learn more about the inverter's role in the power system, visit the [Inverters](/command-module-power-system/inverters) subsection.

@@ -1,0 +1,1406 @@
+Greeting Earthlings.
+
+If you follow the channel, you know that we
+are hard at work restoring the Apollo communication
+
+hardware.
+
+It all started simply enough, with just the
+spacecraft S-Band transponder and the traveling
+
+wave amplifier, that we picked up from collector
+Steve Jurvetson.
+
+But it got progressively more complete, as
+we found and added more pieces to this complex
+
+system, both on the spacecraft side and on
+the ground side, thanks more pieces from Steve,
+
+Marcel and other generous collectors.
+
+It’s getting so involved, that we had to
+add a replica of the control panel to manage
+
+it all.
+
+But we are far from done.
+
+The system is so complex, that we still have
+quite a few more boxes to restore and add.
+
+For one, we have been powering it up with
+a modern 400 Hz 3-phase AC power supply.
+
+Now, wouldn’t it be nice, if we used the
+real spacecraft power supply inverter instead.
+
+[Marc]: Mike and Eric...
+
+[Eric] Hello!
+
+[Marc] ...what is this big chunk of metal
+you're working on?
+
+[Eric] It's very heavy!
+
+[Mike] This is a Block I inverter.
+
+So, one of three of these, that were installed
+in the Command Module, that took in 28 volts
+
+DC and put out 115 Volt RMS three-phase 400
+Hertz AC power.
+
+[Marc] The good avionics AC.
+
+So one kilowatt, 1.5 kilowatt-ish each, right?
+
+One for each fuel cell, which was 1.3 kilowatt,
+something like that.
+
+To better understand the role of the inverters,
+we need to look at the Apollo Command and
+
+Service Module power system for a moment.
+
+The heart of it consists of 3 fuel cells,
+which make electricity by reacting oxygen
+
+and hydrogen, stored in liquid cryogenic form.
+
+This produces both electricity and drinkable
+water.
+
+We explained the fuel cells and their failure
+on Apollo 13 in a previous episode, which
+
+I’ll link in the doodly-doo.
+
+But I’ll recap quickly here.
+
+The fuel cells were quite powerful, at a max
+rating of 1.42 kWatts each.
+
+They produced the power for the whole spacecraft,
+in the form of DC voltage, varying from 27V
+
+to 31V, depending on how hard you ran them.
+
+They had three fuel cells, but the whole mission
+could run on only two, and, as NASA diminutively
+
+puts it in their operations handbook, you
+could successfully terminate a mission on
+
+just one.
+
+Of course, on Apollo 13, they lost all three,
+and they were lucky to have the LM attached,
+
+or the situation would not have been recoverable.
+
+The fuel cell power was distributed over thick
+conductors called busses, Main DC Bus A and
+
+Main DC Bus B. Normally, Fuel Cell 1 powers
+Main Bus A, Fuel Cell 3 powers Main Bus B,
+
+and Fuel Cell 2 is connected to either A,
+B or both, as a backup.
+
+And that’s why you hear the famous Main
+B Bus undervolt call on Apollo 13.
+
+[Apollo 13 Audio]
+LOVELL: Hey Houston, we've had a problem
+
+CAPCOM: OK
+HOUSTON: Standby, they've got a problem
+
+LOVELL: We have a Main B Bus undervolt
+
+They had just lost Fuel Cell 1 and 3.
+
+At the Apollo 13 accident time, the backup
+Fuel Cell 2 was connected to Bus A, so only
+
+the Bus B voltage went to zero, hence the
+Main Bus B Undervolt caution light.
+
+However, you can manually switch any fuel
+cell to any bus, and you hear them at first
+
+try to reconnect fuel cells to the default
+configuration, cell 1 on bus A, and cell 3
+
+on bus B.
+
+EECOM: Flight Eecom
+FLIGHT: Go ahead
+
+EECOM: He's got fuel cells 1 and 3 are offline.
+
+We got main A volts, we have no main B volts.
+
+Have him attempt to reconnect the fuel cells.
+
+Fuel cell 1 to Main A, fuel cell 3 to Main
+B. Just try that.
+
+CAPCOM: 13 Houston, we'd like you to attempt
+to reconnect fuel cell 1 to Main A, and fuel
+
+cell 3 to Main B.
+
+This will of course fail, as both fuel cells
+are already gone, and the remaining fuel cell
+
+2 will be nursed to last an agonizing 90 more
+minutes before being shut down
+
+HAISE: OK, Houston, I'm showing...
+
+I tried to reset and fuel cell 1 and 3 are
+both showing grey flags, but they are both
+
+showing zip on the flows.
+
+EECOM: I copy Flight
+CAPCOM: We copy
+
+EECOM: Let me commiserate on that
+
+Note that on this drawing from Apollo 17,
+Fuel Cell 2 has a big 400 amp/hour battery
+
+backup.
+
+Couldn’t they just switch that on?
+
+Well, you bet they did not have that one on
+Apollo 13.
+
+It was added on 14 after the accident.
+
+Hindsight is always 20/20, as they say.
+
+Note that on this drawing from Apollo 17,
+Fuel Cell 2 has a big 400 amp hour battery
+
+backup.
+
+Couldn’t they just switch that on?
+
+Well, you bet they did not have that one on
+Apollo 13.
+
+It was added on 14 after the accident.
+
+Hindsight is always 20/20, as they say.
+
+But enough for the DC power.
+
+What we want to discuss AC power.
+
+The spacecraft had two AC busses, powered
+by 3 inverters, one of which we are about
+
+to open.
+
+The inverters converted the DC power from
+the fuel cells to AC power, namely 115 Volts,
+
+400 Hz, 3 phase AC, which had been the standard
+for aircraft AC for over half a century.
+
+The inverters were quite beefy, rated at 1.25
+kWatts each.
+
+Since we have 3 fuel cells and 3 inverters,
+you’d think one inverter would be assigned
+
+to each fuel cell, but the system is more
+flexible than that.
+
+As you can see here, inverter 1 is powered
+by Main Bus A, Inverter 2 by Main Bus B, and
+
+Inverter 3 by either Main A or Main B.
+
+Each inverter AC output can be connected to
+two busses, AC 1 or AC 2.
+
+In the normal config , Inverter 1 powers AC
+1, Inverter 2 powers AC 2, and Inverter 3
+
+is on standby, connected to nothing.
+
+Note that unlike the fuel cells, which you
+could pile up on the same DC bus, you cannot
+
+connect two inverters at the same time to
+the same AC bus, because of phase issues.
+
+However, there was flexibility to connect
+any inverter to any AC bus if needed.
+
+A complicated set of motorized relays implemented
+automatic interlocks, preventing to connect
+
+more than one inverter at a time to the same
+AC bus.
+
+So, you should now be able understand why
+they lost AC 2 on Apollo 13.
+
+Main DC Bus B went down, and that’s the
+one that powers inverter 2.
+
+So inverter 2 went down, and that took out
+AC Bus 2, taking with it the telemetry sensors
+
+that were connected to it.
+
+Sensors that will become quite important pretty
+soon.
+
+You can hear them realizing that, early in
+the debug.
+
+EECOM: It does appear we've lost AC Bus 2
+voltage.
+
+Main B is reading 4 Volts, and that effectively
+takes AC 2 away from us.
+
+By the way, that was the voice of our engineering
+hero Sy Liebergot, manning the EECOM console
+
+at the time of the accident.
+
+EECOM stands for Electrical, environmental
+and consumables.
+
+The EECOM will get quite a workout during
+Apollo 13, and get everything just about right
+
+in a very confusing situation.
+
+About 10 minutes after the accident, way before
+it will all get confirmed, EECOM reluctantly
+
+comes to the conclusion that they have lost
+a large amount of pressure in oxygen tank
+
+1, lost fuel cell 1 and 3, and that they blew
+a sphere, which is one of their pressurized
+
+tanks.
+
+EPS: We might have a pressure problem in the
+fuel cell, it looks like
+
+EECOM: Yeah
+EPS: Seemed to happen simultaneously
+
+EECOM: That can't be!
+
+EPS: I can't believe that right off the bat,
+but they are not feeding current
+
+EECOM: Yeah, if you believe that N2 pressure
+we blew a sphere!
+
+EPS: Yeah, we might have lost fuel cell 1,
+and it looks like fuel cell 3 is gone too! 
+
+The other voice you just heard is from our
+behind the scene hero number two, Dick Brown,
+
+manning the EPS, the Electricity Power System
+officer, in the back room.
+
+Sy will heavily rely on Dick for the whole
+debug.
+
+In the meantime, Sy passes on the bad news
+to ECS, the Environmental Control Systems
+
+engineer.
+
+EECOM: And ECS Eecom
+ECS: Go ahead
+
+EECOM: Larry, I am almost afraid to think
+that we lost our O2 tank 1,
+
+or we busted the manifold or something.
+
+Why, that pressure shouldn't be down that
+far.
+
+So, right now, the only remaining source of
+power is fuel cell number 2, powered by the
+
+dwindling pressure in Oxygen Tank 1.
+
+About 16 minutes in, EPS asks for an immediate
+reduction of the power consumption, once again
+
+the correct move.
+
+EPS: Eecom this is EPS
+EECOM: Go
+
+EPS: I think we ought to start powering down
+EECOM: Yeah
+
+EPS: Can we...
+
+let's keep the power down
+
+FLIGHT: Eecom do you want to go through that again, what do you want to power down to?
+
+EECOM: I want to power down a total of 10A,
+Flight
+
+FLIGHT: A total of 10A!?
+
+EECOM: That's affirm
+FLIGHT: Okay
+
+After that first emergency power down, which
+takes a while to figure out, we are about
+
+25 minutes in.
+
+Sy shifts his focus to confirming the status
+of Oxygen Tank 2.
+
+O2 Tank 2 would be their only hope to power
+Fuel Cell 2, if tank 1 keeps leaking out.
+
+But remember our off-line inverter 3 and our
+dead AC Bus 2?
+
+Well, Sy has not been able read the O2 Tank
+2 pressure since the accident, because the
+
+pressure sensor is powered by the now dead
+AC Bus 2.
+
+He then asks Gene Kranz to prioritize the
+re-powering of AC bus 2, so he can check on
+
+O2 Tank 2.
+
+EECOM: Hey EPS Eecom
+EPS: Go
+
+EECOM: We gotta get inverter... we gotta get
+AC2 back temporarily so we can see what's
+
+going on with the O2 pressures!
+
+O2 Tank 2 pressure.
+
+EECOM: Flight Eecom
+FLIGHT: Go Eecom
+
+EECOM: Okay I need one thing right now.
+
+He's powering down, he's down to 41 amps total
+spacecraft.
+
+I'd like to get my AC 2 bus back, so I can
+look at O2 Tank 2 pressure.
+
+I have had no insight into that.
+
+FLIGHT: Okay.
+
+EECOM: Let's get, uh, I guess we can put the
+inverter 3 to Main A - AC2
+
+Inverter 3 is indeed the only other inverter
+that be configured to be powered by Main A,
+
+and can be connected to the AC 2 bus.
+
+But this will not get done, because Gene pushes
+back.
+
+He is still in power reduction mode, and worried
+about creating additional problems.
+
+EECOM: Let's just do it temporarily
+FLIGHT: Let me ask you a question.
+
+Before you do that, would you like to make
+sure you got all AC loads you don't need isolated
+
+from the bus?
+
+EECOM: No, let's not do that right now Flight.
+
+I think we're in good shape that way, main
+A is up high enough where it can handle the
+
+inverter
+FLIGHT: A thing that concerns me, is throwing
+
+equipment - we had a problem, we don't know
+the cause of the problem
+
+That’s when Sy, who had suspected that Fuel
+Cell 1 and 3 were gone from the very first
+
+minutes after the accident, finally breaks
+the bad news to Gene Kranz for the first time.
+
+It’s about 20 minutes in.
+
+EECOM: Flight I've got a feeling we've lost
+two fuel cells.
+
+I hate to put it that way but...
+
+I don't know why we've lost them.
+
+It doesn't all tag up.
+
+And it's not an instrumentation problem, to
+the best I can tell right now.
+
+FLIGHT: Okay, I'll tell you what, let's discuss
+this for just a little bit longer there, Sy.
+
+Capcom start moving them back towards the
+PTC attitude.
+
+Gene is still reluctant.
+
+You have to realize that he is on the flight
+loop.
+
+He has heard nothing of the backroom conversations
+between EECOM and EPS like we have done here,
+
+on this after the fact composite loop.
+
+All he’s heard so far, were the various
+recommendations by EECOM to switch things
+
+around while reducing power draw.
+
+Then Dick Brown has a brainwave.
+
+He realizes that, although you cannot put
+two inverters on one AC bus, you *can* put
+
+one inverter on two AC busses.
+
+Inverter 1 is working fine right now, powered
+from the still good Main A. That will also
+
+save the power draw of bringing up another
+inverter.
+
+EPS: Hey Sy? EECOM: Go ahead 
+
+ 
+EPS: Why don't you put one inverter on both busses
+
+It will save about 4A.
+
+We can try AC inverter 1 on both AC busses.
+
+EECOM: You want inverter 1 on both AC busses?
+
+EPS: Right
+EECOM: Okay
+
+EECOM: Flight Eecom
+FLIGHT: Go Eecom
+
+EECOM: I got a little correction.
+
+Let's put inverter 1 on both AC busses, please
+FLIGHT: Inverter 1 on both AC?
+
+EECOM: That's affirm.
+
+Gene is still nervous about the move and asks
+a second time.
+
+FLIGHT: OK, so, you want to configure inverter
+1 on both AC busses?
+
+EECOM: That's affirm, Flight
+
+You can tell he's still worried about making
+a blunder.
+
+He asks a third time for himself, then fully
+commits to it and gives the go-ahead.
+
+What they are about to discover is startling.
+
+FLIGHT: You want to put inverter one in both
+AC busses?
+
+Eecom and Capcom let's do it.
+
+CAPCOM: Okay.
+
+CAPCOM: 13 Houston, we need to get some more
+instrumentation up.
+
+We'd like you to put inverter 1 on both AC
+buses, over.
+
+FLIGHT: Eecom Flight
+EECOM: Flight Eecom
+
+FLIGHT: Monitor this bird when we switch it
+in
+
+EECOM: Will do
+SWIGERT: Okay
+
+This segment it hard to hear, but behind the
+chatter, you can hear the answer from the
+
+pressure reading.
+
+ECS: Hey Bill O2 Tank 2 pressure.
+
+OK, it's low, it's been low.
+
+It looks like the culprit is probably venting.
+
+In fact, it's probably the one that blew up
+if anything it caused... it caused the problem.
+
+EPS: Okay I see 19 PSI
+ECS: Right
+
+It’s 19 PSI.
+
+It should be 900, not 19.
+
+The second oxygen tank that they were counting
+on is no more.
+
+That’s the one that caused the problem in
+the first place.
+
+Gene is eager to find out, if his caving in
+for the request was worth it.
+
+And Sy is so taken aback by the reading, that
+he asks for some time to take it all in.
+
+FLIGHT: Okay, you got two good AC busses.
+
+What did all that tell you now?
+
+EECOM: It... it tells me... that, uh... well...
+just give me about two more minutes, Flight
+
+FLIGHT: Okay, take your time
+
+Sy thinks the tank 2 is simply empty.
+
+One way to confirm it is by looking at the
+temperature.
+
+EECOM: Trying to figure out what happened
+to that O2 tank 2.
+
+EPS: Right.
+
+Now our pressure still should be good.
+
+And you see, we got a low point...
+EECOM: Why did the temperature drop so suddenly?
+
+EPS: Because I probably don't have anything
+left in it!
+
+EECOM: Yeah!
+
+And we're losing tank 1, if we can believe
+it.
+
+EPS: Uh, losing what?
+
+EECOM: Tank 1 pressure!
+
+EPS: Yeah!
+
+EECOM: Do you think we blew the manifold?
+
+EPS: It looks pretty good that we blew it
+between the check valve and O2 tank 2!
+
+Oh yes, they sure did blow the manifold, and
+then much more.
+
+They blew the whole tank.
+
+Sy will never bother to answer Gene’s question.
+
+He has already moved to the next step.
+
+Tank 2 is a goner.
+
+Instead, he immediately focuses on a few more
+attempts to save what’s left on tank 1.
+
+EPS asks that they try to turn on the heater
+in tank 1, to see if the pressure will come
+
+back up.
+
+Tank 1 is now around 320 psi and dropping.
+
+They need to beg for 5 Amps of power to turn
+the heater on.
+
+FLIGHT: Capcom, we want to get cryo O2 tank
+number 1 heater on
+
+CAPCOM: Roger, copy that, and we'd like to
+build up the pressure in the O2 tank 1.
+
+So turn the heaters on manually, we'll watch
+the pressure for you
+
+EECOM: Okay, 26.9V
+
+FLIGHT: Did you see a 5A increase coming through Eecom?
+
+EECOM: Do you see 5A increase here Dick?
+
+EPS: That's affirm
+EECOM: That's affirm, Flight
+
+FLIGHT: Okay
+EECOM: 26.7V, looks good.
+
+We'll watch the pressure.
+
+OK, this better works, or our Fuel Cell 3
+will lose its oxygen supply.
+
+How does the pressure look, Sy?
+
+EECOM: ECS Eecom
+EPS: Go!
+
+EECOM: It looks grim!
+
+EPS: Yes it does
+EECOM: Get the 5A and no pressure increase
+
+EPS: Just went down!
+
+EECOM: It's going down, we're losing it!
+
+EPS: Yes we are.
+
+We are in serious problem if we can't get
+any pressure, then we've got to power down
+
+some more here
+EECOM: That's right.
+
+And luckily we've got the LM
+EPS: Yeah but that's not gonna help this fuel cell
+
+EECOM: That's right, we're gonna get it all
+
+the way down
+EPS: If we can't save that pressure, we're
+
+gonna lose this third fuel cell
+EECOM: Rog
+
+Sy has realized it’s an abandon ship situation.
+
+He tells flight to get the crew in the LM,
+and admonishes his peer for the LM, called
+
+the TELMU, to better get ready for an emergency
+power up procedure.
+
+EECOM: Flight Eecom
+FLIGHT: Go ahead Eecom
+
+EECOM: The pressure in O2 tank 1 is all the
+way down at 297.
+
+You better think about getting in the LM,
+or using the LM systems.
+
+TELMU: Go ahead Eecom
+EECOM: Now let me tell you, we're in danger
+
+of losing all three fuel cells.
+
+So you guys get yourself geared up, okay?
+
+TELMU: Rog we are working on right this minute...
+
+EECOM: Get your power procedure now.
+
+You guys had one worked out already, I think,
+didn't you?
+
+TELMU: That's right
+EECOM: Okay
+
+It’s about 40 minutes after the accident.
+
+Sy has only one question for EPS now: how
+long do we have to bring the LM up, before
+
+running out of power in the command module?
+
+EPS: Eecom?
+
+EECOM: Go
+EPS: Sy, looks like from the leak rate, that
+
+we've got about 1 hour and 54 minutes left
+until we are down to 100 PSI in tank 1.
+
+Which is about the end of it for the fuel
+cell
+
+EECOM: Uh, Flight, we are gonna hit 100 PSI
+in an hour 54 minutes.
+
+That's the end, right there.
+
+From there on, it’s a mad rush for an emergency
+power up of the LM and a semi-graceful power
+
+down of the CM.
+
+But there will not be quite enough time before
+Fuel Cell 2 conks out.
+
+Which brings us to the subject of the battery
+system.
+
+So we are back in DC land, and there are a
+few more busses we have not talked about yet,
+
+in particular battery Bus A and battery Bus
+B. On Apollo 13, which was lacking the big
+
+service module battery backup added later,
+these were powered by three small silver batteries,
+
+at a measly 40 amp hour each.
+
+These were only meant for powering the Command
+Module during the short re-entry.
+
+There a was provision to throw the batteries
+on the Main DC busses, to cover for a usage
+
+spike.
+
+This was done by connecting, or tying, the
+busses together, once again using a series
+
+of motorized relays.
+
+A few minutes into the accident, the ground
+asks the astronauts to turn on the A/C bus
+
+Tie, which will tie Battery Bus A with Main
+A. Since only Battery A was on the Battery
+
+Bus A, with backup Battery C on standby, this
+action connected Battery A to Main A, to help
+
+out the struggling fuel cell 2.
+
+EECOM: Stand by, Flight.
+
+Go EPS
+EPS: Let's throw a battery on Bus B and Bus A
+
+EECOM: Okay
+
+EPS: Until we are sorted out.
+
+We're getting undervolt.
+
+EECOM: Flight, Eecom
+FLIGHT: Go ahead Eecom
+
+EECOM: Okay.
+
+If we want to keep main...
+
+SWIGERT: Houston, are you still reading 13?
+
+EECOM: Stand by, he's finishing...
+
+CAPCOM: Affirmative, we are reading you
+EECOM: ...get battery A on Main A. Let's get
+
+battery A on main A now
+
+HAISE: OK Bus Tie A/C on
+
+But as the situation gets worse, Houston needs
+to save the re-entry batteries, and tells
+
+the crew to take the tie off.
+
+The astronauts immediately know why, realizing
+full well the consequences of having used
+
+part of their re-entry battery for the better
+of 30 minutes.
+
+EECOM: Flight, Eecom
+FLIGHT: Go Eecom
+
+EECOM: We really gotta get that battery off
+the line and power down some more
+
+FLIGHT: OK Sy, now how long to you want to
+leave this battery online?
+
+EECOM: I want to try to get it off as quick
+as I can, but I need to get powered down.
+
+EECOM: You want that battery off the line
+now?
+
+EPS: Yeah.
+
+We can take it off now
+EECOM: Okay.
+
+Flight Eecom
+FLIGHT: Go Eecom
+
+EECOM: Let's take battery A off the main
+FLIGHT: We can support the...
+
+EECOM: That's right
+FLIGHT: ...right now on the one fuel cell
+
+even with the cry 2 going down?
+
+EECOM: That's affirm, Flight
+FLIGHT: OK.
+
+What's your worry level on cry O2?
+
+EECOM: Say again, Flight?
+
+FLIGHT: OK, you want to...
+
+EECOM: I want to save the battery, Flight
+FLIGHT: Okay.
+
+Pulling the battery A off, Capcom
+CAPCOM: 13 Houston, turn the battery A off
+
+SWIGERT: That's right, we were pulling current
+all the time!
+
+LOVELL: Battery A off, roger
+
+However, an hour later, at the tail end of
+the CM to LM transfer, Fuel Cell 2 is not
+
+going to make it, and they desperately need
+to keep the Command Module computer and the inertial
+
+platform going, until they are able to transfer
+inertial platform attitude angles to the LM.
+
+They are now caught between a rock and hard
+place.
+
+Flight director Glynn Lunney decides, rightly,
+to prioritize the transfer of the inertial
+
+platform over saving the batteries.
+
+They had just started to recharge battery
+A. Glynn reverses that decision promptly.
+
+FLIGHT: Capcom, Flight
+CAPCOM: Go ahead
+
+FLIGHT: When we get a little low, we are going
+to have them pull batt A off (recharge), and
+
+we get them put it on Main Bus A.
+
+We are then going to hold up the IMU long
+enough to get a coarse align in the LM.
+
+And then we'll see whether we are going to
+keep that coarse align or not.
+
+But for right now we are running the profile,
+then we'll have to determine it.
+
+And keeping the coarse align they will, this
+was a mission saving decision.
+
+They will do a free return trajectory burn
+a few hours later, and will not even have
+
+to attempt a platform star alignment for the
+precision abort burn at PC+2 after going around
+
+the Moon.
+
+After that, they’ll finally turn the LM
+inertial platform and the computer off, to
+
+save LM power.
+
+Now, they are still not out of the woods in
+terms of power.
+
+They need to recharge their reentry battery
+A that had saved them earlier.
+
+They will do it, thanks to a cable meant to
+recharge the LM batteries from the CM, and
+
+a hacked procedure to use it in reverse, involving
+100’s of circuit breakers.
+
+[John Aaron, EECOM] There was a normal process
+when you go into the moon, and coasting to
+
+the Moon, that the command module supplied
+a little electrical power to the lunar module.
+
+What you could do through a precarious route,
+is figure out some way to have that power
+
+transfer come backwards.
+
+Somehow we could arrange the circuitry, such
+that the only thing that you would be powering
+
+inside the Command Module, out of all the
+hundreds and thousands of switches and circuit
+
+breakers, was just this little thing called
+a battery charger.
+
+And we sent the crew over this checklist,
+and they couldn't believe that we had devised
+
+this little multi-page checklist, with hundreds
+of circuit breakers and switches and all that
+
+on it, to actually get to the battery charger.
+
+But it worked!
+
+[Marc] Alright, you are now Apollo spacecraft
+power system experts, and should be able to
+
+follow the raw Apollo 13 accident audio, which
+is the best 2-1/2 hour customer service support
+
+call you’ll ever hear.
+
+I’ll link it in the doodly-doo.
+
+But let’s get back to opening our inverter,
+which was supposed to be the focus of the
+
+video.
+
+I know, we got sidetracked a bit…
+
+[Marc] And this one, you identified?
+
+[Mike] Yeah, it has written on the side here:
+"B/P 14 use only".
+
+B/P 14, boilerplate 14, was the North American
+house spacecraft.
+
+So this was the spacecraft that they had in
+their Downey plant, that they did essentially
+
+all their integration testing on.
+
+Block 2 is very similar from the specification
+control drawings we got.
+
+It looks like they may have combined all of
+these studs into circular connectors for Block 2.
+
+You can see, it was laying on the floor of
+the capsule, it has the angle.
+
+So, laying upside down.
+
+The three inverters were wedged under the
+communications equipment, and had to conform
+
+to the curved edge of the heat shield, laying
+upside down.
+
+And somebody apparently had that in his aircraft
+or something.
+
+And they had put goop on it, and there were
+some stuff that is not original.
+
+We cleaned it up.
+
+So it sat on a hot plate - on a hot plate
+- on a cold plate over here!
+
+Which has a leak in it, it has a patch on
+the other side.
+
+And there is this really heavy copperish material,
+that's supposed to be in between the two.
+
+But somebody had added some goop on it, which
+shouldn't be, of course, in a spaceship.
+
+So we removed it as best as we could.
+
+So, this one has seen some amateur use.
+
+But it's a cool thing to have in your aircraft!
+
+Yeah, we don't know what's in there.
+
+There was a screw missing, there's some stuff
+that doesn't belong.
+
+So we're going to look at this stuff in there.
+
+Right away there was something cheesy with
+that unit.
+
+Screws were missing, nuts were heard falling
+inside, and we spied some strange looking
+
+material.
+
+So we took the Depstek endoscope, and got
+greeted by strange stuff that did not look
+
+quite right.
+
+[Marc] A mouse!
+
+[Eric] Almost looks like it, but it's not.
+
+[Marc] So it doesn't look pretty inside.
+
+I'm not sure if it's asbestos-y.
+
+Why would you put that in there?
+
+From then on, our voices will be a bit muffled,
+because we all put on N95 masks.
+
+And it turned out to be a good decision.
+
+The screws or whatever was welded at the bottom,
+just..
+
+some of them went loose.
+
+So this has had a tough life.
+
+That's the weirdest piece of Apollo equipment
+we ever opened up.
+
+It's filled with this crap.
+
+That would be an insulator.
+
+It's very very light.
+
+Yeah, I think you're right, it's - how do
+you call it?
+
+[Eric] Vermiculite.
+
+[Mike] Yeah.
+
+[Marc] Oh no, someone filled the thing with
+vermiculite.
+
+This was a test unit, so it was not potted,
+and therefore you were not supposed to fly
+
+it.
+
+So probably the person that used it in his
+airplane thought it would be a brilliant idea
+
+to pot it with vermiculite.
+
+Which is very light and insulating.
+
+In fact, being an incredibly good thermal
+insulator, it is just about the last thing
+
+you’d want to fill a power supply with.
+
+And to top it off, it’s extremely toxic.
+
+Vermiculite is laced with the most deadly
+form of asbestos.
+
+Good thing we put our N95 masks on, but we
+might still have gotten some of it.
+
+Okay, so we're back at the inverter, the deadly
+asbestos contaminated inverter.
+
+Should be fairly clean, but we masked up just
+in case.
+
+Well, should be fairly clean, I'm sure there's
+tons of particles coming out of it still.
+
+It's a little sketch.
+
+So you see, this is the 28 volt input, and
+it's yay far from the from the heatsink or
+
+the holder of that cap over here.
+
+This is very tight.
+
+There's another point you can see over here
+that is super tight.
+
+I saw another one that...
+
+Yeah, I bent that one up, because it was so
+close, I put it up.
+
+So it's a little sketch, you have three of
+the same thing here.
+
+These guys are actually not transistors, they
+are diodes.
+
+They only have two connections to it, this
+one is left floating, and this is true for
+
+a lot of them, so that's on purpose.
+
+We will have a lot of capacitors to check.
+
+Plenty plenty plenty plenty plenty.
+
+100 micro.
+
+Lots of caps on this side.
+
+Oh that's an SCR.
+
+That is the main inverter.
+
+Lots of transformers of course.
+
+There's a huge one in the middle.
+
+Underneath here, I think, that's a big transformer.
+
+Some more out here.
+
+A bit of a scary monster, that is.
+
+We cleaned it off the best we could, but this
+unit is just too contaminated for us to work
+
+on it.
+
+To make things worse, there were obvious signs
+of corrosion.
+
+We don’t have the schematics, but we have
+a good block diagram and a short description
+
+of how it works.
+
+It’s all solid state, they use thyristors,
+or SCRs, a buck converter, and magnetic amplifiers.
+
+The final upvoltage conversion is done by
+rotating magnetic fields in a specially wound
+
+transformer to create an efficient power unit,
+although very heavy due all the magnetics.
+
+We went as far as testing a few capacitors.
+
+We can’t really work on repairing this unit,
+since it’s too contaminated.
+
+One bad capacitor, and that would be the end
+of it.
+
+[Marc] Testing the caps in circuit, I guess,
+will be the only thing we can do.
+
+[Mike] Yeah.
+
+[Marc] I bent it up because this was like
+a fraction of a millimeter.
+
+[Mike] Man, Block 1!
+
+[Marc] So, my idea was just, check a few caps.
+
+3.8 microfarad!
+
+That starts good.
+
+3.8, okay.
+
+12 microfarad, so that looks okay.
+
+100 microfarads, 92 microfarads, well that's
+pretty good I would say.
+
+550 microfarad!
+
+What's up?
+
+Some with too much capacitance?
+
+Should we complain about it?
+
+47, well they're all reasonably capacitive.
+
+[Mike] hmm-hm.
+
+[Marc] 34, 36, and 35.
+
+So man, looks reasonable to me.
+
+Okay, so the ones that are spot checkable,
+check okay.
+
+Over here, some over there.
+
+It's full of caps basically.
+
+[Mike] Yes.
+
+[Marc] 2.5 microfarads on the dot.
+
+[Mike] Yeah, 60 MFD.
+
+[Marc] This big fellow reads 2.5 micro, but
+it's written 68 on it. Hmm.
+
+So I got the end out of it, so we can test
+it out of circuit.
+
+6 - no, 65 nanofarads.
+
+Oh that's bad.
+
+This one looks like it's a capacitor no more.
+
+Yeah, so, the 1.8 microfarad is from the connection
+it's attached to, and this one is not a capacitor anymore.
+
+Okay, so, we have one bad one.
+
+Which probably tells us, we just give up.
+
+[Mike] Yep.
+
+[Marc] 659 nanofarad.
+
+So we have one example of one that died, which
+is one too many, right?
+
+They are so many capacitors all over the place.
+
+[Mike] Yeah.
+
+[Marc] We pack it all back together.
+
+[Mike] Return to sender!
+
+[Marc] We send it back.
+
+Oh dang, I would have wanted to give it a
+try, but it's not in working order.
+
+[Mike] I'd be really curious to see what a
+Block 2 inverter looks like on the inside,
+
+considering they didn't change the part number.
+
+They changed the dash number, but not the
+part number.
+
+[Marc] I'm being nice to the next owner of
+this.
+
+I'm making sure I put some tape.
+
+It's cloth tape.
+
+It's period correct, from teletype, it's just
+the wrong color.
+
+And places where there was stuff that could
+be come in contact with the top cover.
+
+And our dodgy one behind the 28 volt input.
+
+So if somebody tries to fire it up, at least
+you won't have these short circuits.
+
+So it's all buttoned up, and Eric, who did
+the bottom part of the cold plate, is reassembling it.
+
+But that's it, bye bye inverter, I don't think
+we'll power it up.
+
+So we sealed it up in plastic bags and will
+not touch it again, and had to take few days
+
+off to wash every surface in the lab.
+
+At least it taught us a bit about the command
+module power system, and the incredible adventure
+
+of Apollo 13.
+
+So, don’t use collectible Apollo inverters
+in your aircrafts, unless you have a team
+
+of crack ground controllers to get your back,
+and see you in the next episode!
+

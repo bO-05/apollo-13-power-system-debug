@@ -1,0 +1,2506 @@
+1
+00:00:12,120 --> 00:00:13,120
+Greeting Earthlings.
+
+2
+00:00:13,120 --> 00:00:18,970
+If you follow the channel, you know that we
+are hard at work restoring the Apollo communication
+
+3
+00:00:18,970 --> 00:00:19,970
+hardware.
+
+4
+00:00:19,970 --> 00:00:25,630
+It all started simply enough, with just the
+spacecraft S-Band transponder and the traveling
+
+5
+00:00:25,630 --> 00:00:29,710
+wave amplifier, that we picked up from collector
+Steve Jurvetson.
+
+6
+00:00:29,710 --> 00:00:36,140
+But it got progressively more complete, as
+we found and added more pieces to this complex
+
+7
+00:00:36,140 --> 00:00:43,200
+system, both on the spacecraft side and on
+the ground side, thanks more pieces from Steve,
+
+8
+00:00:43,200 --> 00:00:45,930
+Marcel and other generous collectors.
+
+9
+00:00:45,930 --> 00:00:51,829
+It’s getting so involved, that we had to
+add a replica of the control panel to manage
+
+10
+00:00:51,829 --> 00:00:53,210
+it all.
+
+11
+00:00:53,210 --> 00:00:54,899
+But we are far from done.
+
+12
+00:00:54,899 --> 00:01:01,220
+The system is so complex, that we still have
+quite a few more boxes to restore and add.
+
+13
+00:01:01,220 --> 00:01:07,050
+For one, we have been powering it up with
+a modern 400 Hz 3-phase AC power supply.
+
+14
+00:01:07,050 --> 00:01:15,010
+Now, wouldn’t it be nice, if we used the
+real spacecraft power supply inverter instead.
+
+15
+00:01:15,010 --> 00:01:19,000
+[Marc]: Mike and Eric...
+
+16
+00:01:19,000 --> 00:01:20,000
+[Eric] Hello!
+
+17
+00:01:20,000 --> 00:01:24,810
+[Marc] ...what is this big chunk of metal
+you're working on?
+
+18
+00:01:24,810 --> 00:01:26,540
+[Eric] It's very heavy!
+
+19
+00:01:26,540 --> 00:01:31,250
+[Mike] This is a Block I inverter.
+
+20
+00:01:31,250 --> 00:01:40,780
+So, one of three of these, that were installed
+in the Command Module, that took in 28 volts
+
+21
+00:01:40,780 --> 00:01:47,580
+DC and put out 115 Volt RMS three-phase 400
+Hertz AC power.
+
+22
+00:01:47,580 --> 00:01:51,280
+[Marc] The good avionics AC.
+
+23
+00:01:51,280 --> 00:01:53,689
+So one kilowatt, 1.5 kilowatt-ish each, right?
+
+24
+00:01:53,689 --> 00:02:02,670
+One for each fuel cell, which was 1.3 kilowatt,
+something like that.
+
+25
+00:02:02,670 --> 00:02:07,000
+To better understand the role of the inverters,
+we need to look at the Apollo Command and
+
+26
+00:02:07,000 --> 00:02:10,419
+Service Module power system for a moment.
+
+27
+00:02:10,419 --> 00:02:15,709
+The heart of it consists of 3 fuel cells,
+which make electricity by reacting oxygen
+
+28
+00:02:15,709 --> 00:02:19,900
+and hydrogen, stored in liquid cryogenic form.
+
+29
+00:02:19,900 --> 00:02:23,870
+This produces both electricity and drinkable
+water.
+
+30
+00:02:23,870 --> 00:02:29,011
+We explained the fuel cells and their failure
+on Apollo 13 in a previous episode, which
+
+31
+00:02:29,011 --> 00:02:30,580
+I’ll link in the doodly-doo.
+
+32
+00:02:30,580 --> 00:02:34,390
+But I’ll recap quickly here.
+
+33
+00:02:34,390 --> 00:02:39,860
+The fuel cells were quite powerful, at a max
+rating of 1.42 kWatts each.
+
+34
+00:02:39,860 --> 00:02:47,370
+They produced the power for the whole spacecraft,
+in the form of DC voltage, varying from 27V
+
+35
+00:02:47,370 --> 00:02:50,849
+to 31V, depending on how hard you ran them.
+
+36
+00:02:50,849 --> 00:02:57,340
+They had three fuel cells, but the whole mission
+could run on only two, and, as NASA diminutively
+
+37
+00:02:57,340 --> 00:03:02,620
+puts it in their operations handbook, you
+could successfully terminate a mission on
+
+38
+00:03:02,620 --> 00:03:04,340
+just one.
+
+39
+00:03:04,340 --> 00:03:10,550
+Of course, on Apollo 13, they lost all three,
+and they were lucky to have the LM attached,
+
+40
+00:03:10,550 --> 00:03:13,730
+or the situation would not have been recoverable.
+
+41
+00:03:13,730 --> 00:03:20,460
+The fuel cell power was distributed over thick
+conductors called busses, Main DC Bus A and
+
+42
+00:03:20,460 --> 00:03:29,319
+Main DC Bus B. Normally, Fuel Cell 1 powers
+Main Bus A, Fuel Cell 3 powers Main Bus B,
+
+43
+00:03:29,319 --> 00:03:35,760
+and Fuel Cell 2 is connected to either A,
+B or both, as a backup.
+
+44
+00:03:35,760 --> 00:03:40,200
+And that’s why you hear the famous Main
+B Bus undervolt call on Apollo 13.
+
+45
+00:03:40,200 --> 00:03:43,430
+[Apollo 13 Audio]
+LOVELL: Hey Houston, we've had a problem
+
+46
+00:03:43,430 --> 00:03:46,010
+CAPCOM: OK
+HOUSTON: Standby, they've got a problem
+
+47
+00:03:46,010 --> 00:03:48,540
+LOVELL: We have a Main B Bus undervolt
+
+48
+00:03:48,540 --> 00:03:51,569
+They had just lost Fuel Cell 1 and 3.
+
+49
+00:03:51,569 --> 00:03:58,680
+At the Apollo 13 accident time, the backup
+Fuel Cell 2 was connected to Bus A, so only
+
+50
+00:03:58,680 --> 00:04:04,530
+the Bus B voltage went to zero, hence the
+Main Bus B Undervolt caution light.
+
+51
+00:04:04,530 --> 00:04:10,269
+However, you can manually switch any fuel
+cell to any bus, and you hear them at first
+
+52
+00:04:10,269 --> 00:04:16,440
+try to reconnect fuel cells to the default
+configuration, cell 1 on bus A, and cell 3
+
+53
+00:04:16,440 --> 00:04:17,470
+on bus B.
+
+54
+00:04:17,470 --> 00:04:20,320
+EECOM: Flight Eecom
+FLIGHT: Go ahead
+
+55
+00:04:20,320 --> 00:04:25,039
+EECOM: He's got fuel cells 1 and 3 are offline.
+
+56
+00:04:25,039 --> 00:04:29,380
+We got main A volts, we have no main B volts.
+
+57
+00:04:29,380 --> 00:04:32,370
+Have him attempt to reconnect the fuel cells.
+
+58
+00:04:32,370 --> 00:04:38,380
+Fuel cell 1 to Main A, fuel cell 3 to Main
+B. Just try that.
+
+59
+00:04:38,380 --> 00:04:45,870
+CAPCOM: 13 Houston, we'd like you to attempt
+to reconnect fuel cell 1 to Main A, and fuel
+
+60
+00:04:45,870 --> 00:04:48,289
+cell 3 to Main B.
+
+61
+00:04:48,289 --> 00:04:53,451
+This will of course fail, as both fuel cells
+are already gone, and the remaining fuel cell
+
+62
+00:04:53,451 --> 00:04:58,610
+2 will be nursed to last an agonizing 90 more
+minutes before being shut down
+
+63
+00:04:58,610 --> 00:04:59,710
+HAISE: OK, Houston, I'm showing...
+
+64
+00:04:59,710 --> 00:05:07,440
+I tried to reset and fuel cell 1 and 3 are
+both showing grey flags, but they are both
+
+65
+00:05:07,440 --> 00:05:09,590
+showing zip on the flows.
+
+66
+00:05:09,590 --> 00:05:13,870
+EECOM: I copy Flight
+CAPCOM: We copy
+
+67
+00:05:13,870 --> 00:05:19,630
+EECOM: Let me commiserate on that
+
+68
+00:05:19,630 --> 00:05:26,660
+Note that on this drawing from Apollo 17,
+Fuel Cell 2 has a big 400 amp/hour battery
+
+69
+00:05:26,660 --> 00:05:27,660
+backup.
+
+70
+00:05:27,660 --> 00:05:29,230
+Couldn’t they just switch that on?
+
+71
+00:05:29,230 --> 00:05:30,230
+Well, you bet they did not have that one on
+Apollo 13.
+
+72
+00:05:30,230 --> 00:05:31,230
+It was added on 14 after the accident.
+
+73
+00:05:31,230 --> 00:05:32,230
+Hindsight is always 20/20, as they say.
+
+74
+00:05:32,230 --> 00:05:33,230
+Note that on this drawing from Apollo 17,
+Fuel Cell 2 has a big 400 amp hour battery
+
+75
+00:05:33,230 --> 00:05:34,230
+backup.
+
+76
+00:05:34,230 --> 00:05:35,230
+Couldn’t they just switch that on?
+
+77
+00:05:35,230 --> 00:05:36,230
+Well, you bet they did not have that one on
+Apollo 13.
+
+78
+00:05:36,230 --> 00:05:37,950
+It was added on 14 after the accident.
+
+79
+00:05:37,950 --> 00:05:41,819
+Hindsight is always 20/20, as they say.
+
+80
+00:05:41,819 --> 00:05:43,570
+But enough for the DC power.
+
+81
+00:05:43,570 --> 00:05:46,319
+What we want to discuss AC power.
+
+82
+00:05:46,319 --> 00:05:52,139
+The spacecraft had two AC busses, powered
+by 3 inverters, one of which we are about
+
+83
+00:05:52,139 --> 00:05:53,780
+to open.
+
+84
+00:05:53,780 --> 00:06:00,120
+The inverters converted the DC power from
+the fuel cells to AC power, namely 115 Volts,
+
+85
+00:06:00,120 --> 00:06:07,630
+400 Hz, 3 phase AC, which had been the standard
+for aircraft AC for over half a century.
+
+86
+00:06:07,630 --> 00:06:13,190
+The inverters were quite beefy, rated at 1.25
+kWatts each.
+
+87
+00:06:13,190 --> 00:06:18,070
+Since we have 3 fuel cells and 3 inverters,
+you’d think one inverter would be assigned
+
+88
+00:06:18,070 --> 00:06:23,150
+to each fuel cell, but the system is more
+flexible than that.
+
+89
+00:06:23,150 --> 00:06:29,770
+As you can see here, inverter 1 is powered
+by Main Bus A, Inverter 2 by Main Bus B, and
+
+90
+00:06:29,770 --> 00:06:33,169
+Inverter 3 by either Main A or Main B.
+
+91
+00:06:33,169 --> 00:06:39,190
+Each inverter AC output can be connected to
+two busses, AC 1 or AC 2.
+
+92
+00:06:39,190 --> 00:06:46,500
+In the normal config , Inverter 1 powers AC
+1, Inverter 2 powers AC 2, and Inverter 3
+
+93
+00:06:46,500 --> 00:06:49,720
+is on standby, connected to nothing.
+
+94
+00:06:49,720 --> 00:06:54,840
+Note that unlike the fuel cells, which you
+could pile up on the same DC bus, you cannot
+
+95
+00:06:54,840 --> 00:07:00,699
+connect two inverters at the same time to
+the same AC bus, because of phase issues.
+
+96
+00:07:00,699 --> 00:07:07,350
+However, there was flexibility to connect
+any inverter to any AC bus if needed.
+
+97
+00:07:07,350 --> 00:07:13,530
+A complicated set of motorized relays implemented
+automatic interlocks, preventing to connect
+
+98
+00:07:13,530 --> 00:07:17,740
+more than one inverter at a time to the same
+AC bus.
+
+99
+00:07:17,740 --> 00:07:23,080
+So, you should now be able understand why
+they lost AC 2 on Apollo 13.
+
+100
+00:07:23,080 --> 00:07:28,790
+Main DC Bus B went down, and that’s the
+one that powers inverter 2.
+
+101
+00:07:28,790 --> 00:07:35,190
+So inverter 2 went down, and that took out
+AC Bus 2, taking with it the telemetry sensors
+
+102
+00:07:35,190 --> 00:07:37,919
+that were connected to it.
+
+103
+00:07:37,919 --> 00:07:41,340
+Sensors that will become quite important pretty
+soon.
+
+104
+00:07:41,340 --> 00:07:45,740
+You can hear them realizing that, early in
+the debug.
+
+105
+00:07:45,740 --> 00:07:51,389
+EECOM: It does appear we've lost AC Bus 2
+voltage.
+
+106
+00:07:51,389 --> 00:07:59,160
+Main B is reading 4 Volts, and that effectively
+takes AC 2 away from us.
+
+107
+00:07:59,160 --> 00:08:04,919
+By the way, that was the voice of our engineering
+hero Sy Liebergot, manning the EECOM console
+
+108
+00:08:04,919 --> 00:08:07,500
+at the time of the accident.
+
+109
+00:08:07,500 --> 00:08:11,629
+EECOM stands for Electrical, environmental
+and consumables.
+
+110
+00:08:11,629 --> 00:08:17,319
+The EECOM will get quite a workout during
+Apollo 13, and get everything just about right
+
+111
+00:08:17,319 --> 00:08:20,430
+in a very confusing situation.
+
+112
+00:08:20,430 --> 00:08:25,580
+About 10 minutes after the accident, way before
+it will all get confirmed, EECOM reluctantly
+
+113
+00:08:25,580 --> 00:08:29,940
+comes to the conclusion that they have lost
+a large amount of pressure in oxygen tank
+
+114
+00:08:29,940 --> 00:08:35,149
+1, lost fuel cell 1 and 3, and that they blew
+a sphere, which is one of their pressurized
+
+115
+00:08:35,149 --> 00:08:36,149
+tanks.
+
+116
+00:08:36,149 --> 00:08:41,091
+EPS: We might have a pressure problem in the
+fuel cell, it looks like
+
+117
+00:08:41,091 --> 00:08:42,913
+EECOM: Yeah
+EPS: Seemed to happen simultaneously
+
+118
+00:08:42,913 --> 00:08:45,694
+EECOM: That can't be!
+
+119
+00:08:45,694 --> 00:08:50,914
+EPS: I can't believe that right off the bat,
+but they are not feeding current
+
+120
+00:08:55,910 --> 00:09:01,800
+EECOM: Yeah, if you believe that N2 pressure
+we blew a sphere!
+
+121
+00:09:04,254 --> 00:09:11,420
+EPS: Yeah, we might have lost fuel cell 1,
+and it looks like fuel cell 3 is gone too! 
+
+122
+00:09:11,420 --> 00:09:16,920
+The other voice you just heard is from our
+behind the scene hero number two, Dick Brown,
+
+123
+00:09:16,920 --> 00:09:22,579
+manning the EPS, the Electricity Power System
+officer, in the back room.
+
+124
+00:09:22,579 --> 00:09:26,290
+Sy will heavily rely on Dick for the whole
+debug.
+
+125
+00:09:26,290 --> 00:09:31,839
+In the meantime, Sy passes on the bad news
+to ECS, the Environmental Control Systems
+
+126
+00:09:31,839 --> 00:09:32,839
+engineer.
+
+127
+00:09:32,839 --> 00:09:35,877
+EECOM: And ECS Eecom
+ECS: Go ahead
+
+128
+00:09:35,877 --> 00:09:40,720
+EECOM: Larry, I am almost afraid to think
+that we lost our O2 tank 1,
+
+129
+00:09:40,720 --> 00:09:43,490
+or we busted the manifold or something.
+
+130
+00:09:43,490 --> 00:09:46,070
+Why, that pressure shouldn't be down that
+far.
+
+131
+00:09:46,070 --> 00:09:51,570
+So, right now, the only remaining source of
+power is fuel cell number 2, powered by the
+
+132
+00:09:51,570 --> 00:09:54,580
+dwindling pressure in Oxygen Tank 1.
+
+133
+00:09:54,580 --> 00:10:01,459
+About 16 minutes in, EPS asks for an immediate
+reduction of the power consumption, once again
+
+134
+00:10:01,459 --> 00:10:02,459
+the correct move.
+
+135
+00:10:03,459 --> 00:10:05,234
+EPS: Eecom this is EPS
+EECOM: Go
+
+136
+00:10:05,234 --> 00:10:08,316
+EPS: I think we ought to start powering down
+EECOM: Yeah
+
+137
+00:10:08,316 --> 00:10:09,908
+EPS: Can we...
+
+138
+00:10:09,908 --> 00:10:12,419
+let's keep the power down
+
+139
+00:10:15,071 --> 00:10:18,425
+FLIGHT: Eecom do you want to go through that again, what do you want to power down to?
+
+140
+00:10:18,425 --> 00:10:21,621
+EECOM: I want to power down a total of 10A,
+Flight
+
+141
+00:10:21,621 --> 00:10:22,911
+FLIGHT: A total of 10A!?
+
+142
+00:10:22,911 --> 00:10:25,423
+EECOM: That's affirm
+FLIGHT: Okay
+
+143
+00:10:26,146 --> 00:10:30,779
+After that first emergency power down, which
+takes a while to figure out, we are about
+
+144
+00:10:30,779 --> 00:10:32,730
+25 minutes in.
+
+145
+00:10:32,730 --> 00:10:37,490
+Sy shifts his focus to confirming the status
+of Oxygen Tank 2.
+
+146
+00:10:37,490 --> 00:10:44,540
+O2 Tank 2 would be their only hope to power
+Fuel Cell 2, if tank 1 keeps leaking out.
+
+147
+00:10:44,540 --> 00:10:49,350
+But remember our off-line inverter 3 and our
+dead AC Bus 2?
+
+148
+00:10:49,350 --> 00:10:54,830
+Well, Sy has not been able read the O2 Tank
+2 pressure since the accident, because the
+
+149
+00:10:54,830 --> 00:10:59,680
+pressure sensor is powered by the now dead
+AC Bus 2.
+
+150
+00:10:59,680 --> 00:11:05,960
+He then asks Gene Kranz to prioritize the
+re-powering of AC bus 2, so he can check on
+
+151
+00:11:05,960 --> 00:11:07,019
+O2 Tank 2.
+
+152
+00:11:07,939 --> 00:11:09,843
+EECOM: Hey EPS Eecom
+EPS: Go
+
+153
+00:11:09,843 --> 00:11:13,950
+EECOM: We gotta get inverter... we gotta get
+AC2 back temporarily so we can see what's
+
+154
+00:11:13,950 --> 00:11:16,400
+going on with the O2 pressures!
+
+155
+00:11:16,400 --> 00:11:18,020
+O2 Tank 2 pressure.
+
+156
+00:11:18,305 --> 00:11:20,352
+EECOM: Flight Eecom
+FLIGHT: Go Eecom
+
+157
+00:11:20,352 --> 00:11:21,850
+EECOM: Okay I need one thing right now.
+
+158
+00:11:21,850 --> 00:11:25,519
+He's powering down, he's down to 41 amps total
+spacecraft.
+
+159
+00:11:25,519 --> 00:11:31,940
+I'd like to get my AC 2 bus back, so I can
+look at O2 Tank 2 pressure.
+
+160
+00:11:31,940 --> 00:11:33,830
+I have had no insight into that.
+
+161
+00:11:33,830 --> 00:11:34,830
+FLIGHT: Okay.
+
+162
+00:11:34,830 --> 00:11:42,866
+EECOM: Let's get, uh, I guess we can put the
+inverter 3 to Main A - AC2
+
+163
+00:11:42,866 --> 00:11:48,480
+Inverter 3 is indeed the only other inverter
+that be configured to be powered by Main A,
+
+164
+00:11:48,480 --> 00:11:51,410
+and can be connected to the AC 2 bus.
+
+165
+00:11:51,410 --> 00:11:54,770
+But this will not get done, because Gene pushes
+back.
+
+166
+00:11:54,770 --> 00:11:59,579
+He is still in power reduction mode, and worried
+about creating additional problems.
+
+167
+00:12:01,244 --> 00:12:03,443
+EECOM: Let's just do it temporarily
+FLIGHT: Let me ask you a question.
+
+168
+00:12:03,443 --> 00:12:06,295
+Before you do that, would you like to make
+sure you got all AC loads you don't need isolated
+
+169
+00:12:06,295 --> 00:12:08,734
+from the bus?
+
+170
+00:12:10,816 --> 00:12:13,387
+EECOM: No, let's not do that right now Flight.
+
+171
+00:12:13,387 --> 00:12:17,140
+I think we're in good shape that way, main
+A is up high enough where it can handle the
+
+172
+00:12:17,140 --> 00:12:20,529
+inverter
+FLIGHT: A thing that concerns me, is throwing
+
+173
+00:12:20,529 --> 00:12:24,510
+equipment - we had a problem, we don't know
+the cause of the problem
+
+174
+00:12:24,510 --> 00:12:29,709
+That’s when Sy, who had suspected that Fuel
+Cell 1 and 3 were gone from the very first
+
+175
+00:12:29,709 --> 00:12:35,310
+minutes after the accident, finally breaks
+the bad news to Gene Kranz for the first time.
+
+176
+00:12:35,310 --> 00:12:36,880
+It’s about 20 minutes in.
+
+177
+00:12:36,880 --> 00:12:40,380
+EECOM: Flight I've got a feeling we've lost
+two fuel cells.
+
+178
+00:12:40,380 --> 00:12:42,970
+I hate to put it that way but...
+
+179
+00:12:42,970 --> 00:12:46,180
+I don't know why we've lost them.
+
+180
+00:12:46,180 --> 00:12:47,279
+It doesn't all tag up.
+
+181
+00:12:47,279 --> 00:12:51,320
+And it's not an instrumentation problem, to
+the best I can tell right now.
+
+182
+00:12:51,320 --> 00:12:55,940
+FLIGHT: Okay, I'll tell you what, let's discuss
+this for just a little bit longer there, Sy.
+
+183
+00:12:55,940 --> 00:12:59,660
+Capcom start moving them back towards the
+PTC attitude.
+
+184
+00:12:59,660 --> 00:13:01,640
+Gene is still reluctant.
+
+185
+00:13:01,640 --> 00:13:04,589
+You have to realize that he is on the flight
+loop.
+
+186
+00:13:04,589 --> 00:13:10,470
+He has heard nothing of the backroom conversations
+between EECOM and EPS like we have done here,
+
+187
+00:13:10,470 --> 00:13:12,530
+on this after the fact composite loop.
+
+188
+00:13:12,530 --> 00:13:17,339
+All he’s heard so far, were the various
+recommendations by EECOM to switch things
+
+189
+00:13:17,339 --> 00:13:20,839
+around while reducing power draw.
+
+190
+00:13:20,839 --> 00:13:23,410
+Then Dick Brown has a brainwave.
+
+191
+00:13:23,410 --> 00:13:29,810
+He realizes that, although you cannot put
+two inverters on one AC bus, you *can* put
+
+192
+00:13:29,810 --> 00:13:33,980
+one inverter on two AC busses.
+
+193
+00:13:33,980 --> 00:13:38,949
+Inverter 1 is working fine right now, powered
+from the still good Main A. That will also
+
+194
+00:13:38,949 --> 00:13:42,829
+save the power draw of bringing up another
+inverter.
+
+195
+00:13:42,829 --> 00:13:45,230
+EPS: Hey Sy? EECOM: Go ahead 
+
+196
+00:13:45,230 --> 00:13:48,190
+ 
+EPS: Why don't you put one inverter on both busses
+
+197
+00:13:48,190 --> 00:13:49,940
+It will save about 4A.
+
+198
+00:13:51,364 --> 00:13:55,629
+We can try AC inverter 1 on both AC busses.
+
+199
+00:13:55,629 --> 00:13:58,076
+EECOM: You want inverter 1 on both AC busses?
+
+200
+00:13:58,076 --> 00:13:59,076
+EPS: Right
+EECOM: Okay
+
+201
+00:14:02,034 --> 00:14:03,436
+EECOM: Flight Eecom
+FLIGHT: Go Eecom
+
+202
+00:14:03,436 --> 00:14:04,880
+EECOM: I got a little correction.
+
+203
+00:14:04,880 --> 00:14:09,760
+Let's put inverter 1 on both AC busses, please
+FLIGHT: Inverter 1 on both AC?
+
+204
+00:14:09,760 --> 00:14:11,203
+EECOM: That's affirm.
+
+205
+00:14:11,203 --> 00:14:14,790
+Gene is still nervous about the move and asks
+a second time.
+
+206
+00:14:14,790 --> 00:14:20,705
+FLIGHT: OK, so, you want to configure inverter
+1 on both AC busses?
+
+207
+00:14:20,705 --> 00:14:22,361
+EECOM: That's affirm, Flight
+
+208
+00:14:24,224 --> 00:14:27,470
+You can tell he's still worried about making
+a blunder.
+
+209
+00:14:27,470 --> 00:14:33,329
+He asks a third time for himself, then fully
+commits to it and gives the go-ahead.
+
+210
+00:14:33,329 --> 00:14:36,209
+What they are about to discover is startling.
+
+211
+00:14:37,107 --> 00:14:39,982
+FLIGHT: You want to put inverter one in both
+AC busses?
+
+212
+00:14:39,982 --> 00:14:41,837
+Eecom and Capcom let's do it.
+
+213
+00:14:41,837 --> 00:14:43,363
+CAPCOM: Okay.
+
+214
+00:14:43,363 --> 00:14:46,765
+CAPCOM: 13 Houston, we need to get some more
+instrumentation up.
+
+215
+00:14:46,765 --> 00:14:49,457
+We'd like you to put inverter 1 on both AC
+buses, over.
+
+216
+00:14:49,457 --> 00:14:50,709
+FLIGHT: Eecom Flight
+EECOM: Flight Eecom
+
+217
+00:14:50,709 --> 00:14:52,450
+FLIGHT: Monitor this bird when we switch it
+in
+
+218
+00:14:52,450 --> 00:14:55,982
+EECOM: Will do
+SWIGERT: Okay
+
+219
+00:14:57,779 --> 00:15:02,639
+This segment it hard to hear, but behind the
+chatter, you can hear the answer from the
+
+220
+00:15:02,639 --> 00:15:03,639
+pressure reading.
+
+221
+00:15:04,756 --> 00:15:09,295
+ECS: Hey Bill O2 Tank 2 pressure.
+
+222
+00:15:10,128 --> 00:15:11,884
+OK, it's low, it's been low.
+
+223
+00:15:11,884 --> 00:15:15,294
+It looks like the culprit is probably venting.
+
+224
+00:15:15,294 --> 00:15:19,255
+In fact, it's probably the one that blew up
+if anything it caused... it caused the problem.
+
+225
+00:15:19,255 --> 00:15:22,515
+EPS: Okay I see 19 PSI
+ECS: Right
+
+226
+00:15:22,646 --> 00:15:25,399
+It’s 19 PSI.
+
+227
+00:15:25,399 --> 00:15:29,290
+It should be 900, not 19.
+
+228
+00:15:29,290 --> 00:15:33,500
+The second oxygen tank that they were counting
+on is no more.
+
+229
+00:15:33,500 --> 00:15:37,360
+That’s the one that caused the problem in
+the first place.
+
+230
+00:15:37,360 --> 00:15:41,920
+Gene is eager to find out, if his caving in
+for the request was worth it.
+
+231
+00:15:41,920 --> 00:15:46,930
+And Sy is so taken aback by the reading, that
+he asks for some time to take it all in.
+
+232
+00:15:46,930 --> 00:15:48,810
+FLIGHT: Okay, you got two good AC busses.
+
+233
+00:15:48,810 --> 00:15:49,810
+What did all that tell you now?
+
+234
+00:15:49,810 --> 00:15:57,149
+EECOM: It... it tells me... that, uh... well...
+just give me about two more minutes, Flight
+
+235
+00:15:57,149 --> 00:15:59,920
+FLIGHT: Okay, take your time
+
+236
+00:15:59,920 --> 00:16:02,779
+Sy thinks the tank 2 is simply empty.
+
+237
+00:16:02,779 --> 00:16:04,870
+One way to confirm it is by looking at the
+temperature.
+
+238
+00:16:04,870 --> 00:16:08,130
+EECOM: Trying to figure out what happened
+to that O2 tank 2.
+
+239
+00:16:08,130 --> 00:16:09,130
+EPS: Right.
+
+240
+00:16:09,130 --> 00:16:10,880
+Now our pressure still should be good.
+
+241
+00:16:10,880 --> 00:16:15,940
+And you see, we got a low point...
+EECOM: Why did the temperature drop so suddenly?
+
+242
+00:16:15,940 --> 00:16:19,730
+EPS: Because I probably don't have anything
+left in it!
+
+243
+00:16:19,730 --> 00:16:20,730
+EECOM: Yeah!
+
+244
+00:16:20,730 --> 00:16:24,269
+And we're losing tank 1, if we can believe
+it.
+
+245
+00:16:24,269 --> 00:16:25,779
+EPS: Uh, losing what?
+
+246
+00:16:25,779 --> 00:16:27,300
+EECOM: Tank 1 pressure!
+
+247
+00:16:27,300 --> 00:16:28,300
+EPS: Yeah!
+
+248
+00:16:28,300 --> 00:16:31,269
+EECOM: Do you think we blew the manifold?
+
+249
+00:16:31,269 --> 00:16:37,940
+EPS: It looks pretty good that we blew it
+between the check valve and O2 tank 2!
+
+250
+00:16:37,940 --> 00:16:42,389
+Oh yes, they sure did blow the manifold, and
+then much more.
+
+251
+00:16:42,389 --> 00:16:44,920
+They blew the whole tank.
+
+252
+00:16:44,920 --> 00:16:48,279
+Sy will never bother to answer Gene’s question.
+
+253
+00:16:48,279 --> 00:16:50,940
+He has already moved to the next step.
+
+254
+00:16:50,940 --> 00:16:52,800
+Tank 2 is a goner.
+
+255
+00:16:52,800 --> 00:16:58,769
+Instead, he immediately focuses on a few more
+attempts to save what’s left on tank 1.
+
+256
+00:16:58,769 --> 00:17:04,449
+EPS asks that they try to turn on the heater
+in tank 1, to see if the pressure will come
+
+257
+00:17:04,449 --> 00:17:05,449
+back up.
+
+258
+00:17:05,449 --> 00:17:09,230
+Tank 1 is now around 320 psi and dropping.
+
+259
+00:17:09,230 --> 00:17:13,206
+They need to beg for 5 Amps of power to turn
+the heater on.
+
+260
+00:17:14,126 --> 00:17:19,070
+FLIGHT: Capcom, we want to get cryo O2 tank
+number 1 heater on
+
+261
+00:17:19,070 --> 00:17:25,116
+CAPCOM: Roger, copy that, and we'd like to
+build up the pressure in the O2 tank 1.
+
+262
+00:17:25,117 --> 00:17:30,000
+So turn the heaters on manually, we'll watch
+the pressure for you
+
+263
+00:17:30,000 --> 00:17:32,101
+EECOM: Okay, 26.9V
+
+264
+00:17:32,101 --> 00:17:34,153
+FLIGHT: Did you see a 5A increase coming through Eecom?
+
+265
+00:17:34,153 --> 00:17:35,513
+EECOM: Do you see 5A increase here Dick?
+
+266
+00:17:35,513 --> 00:17:38,320
+EPS: That's affirm
+EECOM: That's affirm, Flight
+
+267
+00:17:38,320 --> 00:17:39,970
+FLIGHT: Okay
+EECOM: 26.7V, looks good.
+
+268
+00:17:39,970 --> 00:17:41,866
+We'll watch the pressure.
+
+269
+00:17:41,866 --> 00:17:46,560
+OK, this better works, or our Fuel Cell 3
+will lose its oxygen supply.
+
+270
+00:17:46,560 --> 00:17:48,910
+How does the pressure look, Sy?
+
+271
+00:17:48,910 --> 00:17:51,809
+EECOM: ECS Eecom
+EPS: Go!
+
+272
+00:17:51,809 --> 00:17:53,039
+EECOM: It looks grim!
+
+273
+00:17:53,039 --> 00:17:56,627
+EPS: Yes it does
+EECOM: Get the 5A and no pressure increase
+
+274
+00:17:56,627 --> 00:17:59,277
+EPS: Just went down!
+
+275
+00:17:59,277 --> 00:18:02,040
+EECOM: It's going down, we're losing it!
+
+276
+00:18:02,040 --> 00:18:03,594
+EPS: Yes we are.
+
+277
+00:18:03,594 --> 00:18:06,610
+We are in serious problem if we can't get
+any pressure, then we've got to power down
+
+278
+00:18:06,610 --> 00:18:08,158
+some more here
+EECOM: That's right.
+
+279
+00:18:08,158 --> 00:18:13,191
+And luckily we've got the LM
+EPS: Yeah but that's not gonna help this fuel cell
+
+280
+00:18:13,191 --> 00:18:15,135
+EECOM: That's right, we're gonna get it all
+
+281
+00:18:15,135 --> 00:18:17,570
+the way down
+EPS: If we can't save that pressure, we're
+
+282
+00:18:17,570 --> 00:18:20,730
+gonna lose this third fuel cell
+EECOM: Rog
+
+283
+00:18:20,730 --> 00:18:24,390
+Sy has realized it’s an abandon ship situation.
+
+284
+00:18:24,390 --> 00:18:29,250
+He tells flight to get the crew in the LM,
+and admonishes his peer for the LM, called
+
+285
+00:18:29,250 --> 00:18:33,460
+the TELMU, to better get ready for an emergency
+power up procedure.
+
+286
+00:18:33,460 --> 00:18:35,980
+EECOM: Flight Eecom
+FLIGHT: Go ahead Eecom
+
+287
+00:18:35,980 --> 00:18:40,049
+EECOM: The pressure in O2 tank 1 is all the
+way down at 297.
+
+288
+00:18:40,049 --> 00:18:43,309
+You better think about getting in the LM,
+or using the LM systems.
+
+289
+00:18:43,309 --> 00:18:46,330
+TELMU: Go ahead Eecom
+EECOM: Now let me tell you, we're in danger
+
+290
+00:18:46,330 --> 00:18:47,970
+of losing all three fuel cells.
+
+291
+00:18:47,970 --> 00:18:50,482
+So you guys get yourself geared up, okay?
+
+292
+00:18:50,482 --> 00:18:51,482
+TELMU: Rog we are working on right this minute...
+
+293
+00:18:51,482 --> 00:18:52,942
+EECOM: Get your power procedure now.
+
+294
+00:18:52,942 --> 00:18:54,738
+You guys had one worked out already, I think,
+didn't you?
+
+295
+00:18:54,738 --> 00:18:56,280
+TELMU: That's right
+EECOM: Okay
+
+296
+00:18:56,280 --> 00:18:59,460
+It’s about 40 minutes after the accident.
+
+297
+00:18:59,460 --> 00:19:05,021
+Sy has only one question for EPS now: how
+long do we have to bring the LM up, before
+
+298
+00:19:05,021 --> 00:19:07,630
+running out of power in the command module?
+
+299
+00:19:07,630 --> 00:19:09,030
+EPS: Eecom?
+
+300
+00:19:09,030 --> 00:19:13,212
+EECOM: Go
+EPS: Sy, looks like from the leak rate, that
+
+301
+00:19:13,212 --> 00:19:19,661
+we've got about 1 hour and 54 minutes left
+until we are down to 100 PSI in tank 1.
+
+302
+00:19:19,661 --> 00:19:25,026
+Which is about the end of it for the fuel
+cell
+
+303
+00:19:25,026 --> 00:19:29,710
+EECOM: Uh, Flight, we are gonna hit 100 PSI
+in an hour 54 minutes.
+
+304
+00:19:29,710 --> 00:19:34,100
+That's the end, right there.
+
+305
+00:19:34,100 --> 00:19:38,940
+From there on, it’s a mad rush for an emergency
+power up of the LM and a semi-graceful power
+
+306
+00:19:38,940 --> 00:19:40,000
+down of the CM.
+
+307
+00:19:40,000 --> 00:19:45,220
+But there will not be quite enough time before
+Fuel Cell 2 conks out.
+
+308
+00:19:45,220 --> 00:19:48,840
+Which brings us to the subject of the battery
+system.
+
+309
+00:19:48,840 --> 00:19:54,030
+So we are back in DC land, and there are a
+few more busses we have not talked about yet,
+
+310
+00:19:54,030 --> 00:20:00,190
+in particular battery Bus A and battery Bus
+B. On Apollo 13, which was lacking the big
+
+311
+00:20:00,190 --> 00:20:06,640
+service module battery backup added later,
+these were powered by three small silver batteries,
+
+312
+00:20:06,640 --> 00:20:09,720
+at a measly 40 amp hour each.
+
+313
+00:20:09,720 --> 00:20:14,460
+These were only meant for powering the Command
+Module during the short re-entry.
+
+314
+00:20:14,460 --> 00:20:19,200
+There a was provision to throw the batteries
+on the Main DC busses, to cover for a usage
+
+315
+00:20:19,200 --> 00:20:20,510
+spike.
+
+316
+00:20:20,510 --> 00:20:25,900
+This was done by connecting, or tying, the
+busses together, once again using a series
+
+317
+00:20:25,900 --> 00:20:27,630
+of motorized relays.
+
+318
+00:20:27,630 --> 00:20:33,520
+A few minutes into the accident, the ground
+asks the astronauts to turn on the A/C bus
+
+319
+00:20:33,520 --> 00:20:40,100
+Tie, which will tie Battery Bus A with Main
+A. Since only Battery A was on the Battery
+
+320
+00:20:40,100 --> 00:20:47,309
+Bus A, with backup Battery C on standby, this
+action connected Battery A to Main A, to help
+
+321
+00:20:47,309 --> 00:20:49,110
+out the struggling fuel cell 2.
+
+322
+00:20:49,680 --> 00:20:50,880
+EECOM: Stand by, Flight.
+
+323
+00:20:50,902 --> 00:20:55,277
+Go EPS
+EPS: Let's throw a battery on Bus B and Bus A
+
+324
+00:20:55,277 --> 00:20:56,277
+EECOM: Okay
+
+325
+00:20:56,277 --> 00:20:57,731
+EPS: Until we are sorted out.
+
+326
+00:20:57,731 --> 00:20:58,716
+We're getting undervolt.
+
+327
+00:20:58,716 --> 00:21:00,091
+EECOM: Flight, Eecom
+FLIGHT: Go ahead Eecom
+
+328
+00:21:00,091 --> 00:21:00,930
+EECOM: Okay.
+
+329
+00:21:00,930 --> 00:21:03,536
+If we want to keep main...
+
+330
+00:21:03,536 --> 00:21:05,590
+SWIGERT: Houston, are you still reading 13?
+
+331
+00:21:05,590 --> 00:21:07,779
+EECOM: Stand by, he's finishing...
+
+332
+00:21:07,779 --> 00:21:10,064
+CAPCOM: Affirmative, we are reading you
+EECOM: ...get battery A on Main A. Let's get
+
+333
+00:21:10,064 --> 00:21:12,666
+battery A on main A now
+
+334
+00:21:12,666 --> 00:21:15,208
+HAISE: OK Bus Tie A/C on
+
+335
+00:21:15,799 --> 00:21:20,600
+But as the situation gets worse, Houston needs
+to save the re-entry batteries, and tells
+
+336
+00:21:20,600 --> 00:21:22,990
+the crew to take the tie off.
+
+337
+00:21:22,990 --> 00:21:28,480
+The astronauts immediately know why, realizing
+full well the consequences of having used
+
+338
+00:21:28,480 --> 00:21:32,730
+part of their re-entry battery for the better
+of 30 minutes.
+
+339
+00:21:32,730 --> 00:21:35,770
+EECOM: Flight, Eecom
+FLIGHT: Go Eecom
+
+340
+00:21:35,770 --> 00:21:41,194
+EECOM: We really gotta get that battery off
+the line and power down some more
+
+341
+00:21:41,194 --> 00:21:46,516
+FLIGHT: OK Sy, now how long to you want to
+leave this battery online?
+
+342
+00:21:46,516 --> 00:21:49,685
+EECOM: I want to try to get it off as quick
+as I can, but I need to get powered down.
+
+343
+00:21:49,685 --> 00:21:52,245
+EECOM: You want that battery off the line
+now?
+
+344
+00:21:52,245 --> 00:21:53,113
+EPS: Yeah.
+
+345
+00:21:53,113 --> 00:21:56,239
+We can take it off now
+EECOM: Okay.
+
+346
+00:21:56,239 --> 00:21:57,721
+Flight Eecom
+FLIGHT: Go Eecom
+
+347
+00:21:57,721 --> 00:22:01,219
+EECOM: Let's take battery A off the main
+FLIGHT: We can support the...
+
+348
+00:22:01,219 --> 00:22:03,578
+EECOM: That's right
+FLIGHT: ...right now on the one fuel cell
+
+349
+00:22:03,578 --> 00:22:05,739
+even with the cry 2 going down?
+
+350
+00:22:05,739 --> 00:22:07,900
+EECOM: That's affirm, Flight
+FLIGHT: OK.
+
+351
+00:22:07,900 --> 00:22:11,793
+What's your worry level on cry O2?
+
+352
+00:22:11,793 --> 00:22:13,166
+EECOM: Say again, Flight?
+
+353
+00:22:13,188 --> 00:22:14,561
+FLIGHT: OK, you want to...
+
+354
+00:22:14,561 --> 00:22:17,478
+EECOM: I want to save the battery, Flight
+FLIGHT: Okay.
+
+355
+00:22:17,478 --> 00:22:25,264
+Pulling the battery A off, Capcom
+CAPCOM: 13 Houston, turn the battery A off
+
+356
+00:22:25,264 --> 00:22:28,538
+SWIGERT: That's right, we were pulling current
+all the time!
+
+357
+00:22:28,538 --> 00:22:31,080
+LOVELL: Battery A off, roger
+
+358
+00:22:31,080 --> 00:22:36,720
+However, an hour later, at the tail end of
+the CM to LM transfer, Fuel Cell 2 is not
+
+359
+00:22:36,720 --> 00:22:42,130
+going to make it, and they desperately need
+to keep the Command Module computer and the inertial
+
+360
+00:22:42,130 --> 00:22:48,600
+platform going, until they are able to transfer
+inertial platform attitude angles to the LM.
+
+361
+00:22:48,600 --> 00:22:52,120
+They are now caught between a rock and hard
+place.
+
+362
+00:22:52,120 --> 00:22:57,090
+Flight director Glynn Lunney decides, rightly,
+to prioritize the transfer of the inertial
+
+363
+00:22:57,090 --> 00:22:59,549
+platform over saving the batteries.
+
+364
+00:22:59,549 --> 00:23:04,520
+They had just started to recharge battery
+A. Glynn reverses that decision promptly.
+
+365
+00:23:05,638 --> 00:23:06,638
+FLIGHT: Capcom, Flight
+CAPCOM: Go ahead
+
+366
+00:23:06,638 --> 00:23:10,355
+FLIGHT: When we get a little low, we are going
+to have them pull batt A off (recharge), and
+
+367
+00:23:10,355 --> 00:23:13,002
+we get them put it on Main Bus A.
+
+368
+00:23:13,002 --> 00:23:17,508
+We are then going to hold up the IMU long
+enough to get a coarse align in the LM.
+
+369
+00:23:17,508 --> 00:23:19,779
+And then we'll see whether we are going to
+keep that coarse align or not.
+
+370
+00:23:19,779 --> 00:23:23,168
+But for right now we are running the profile,
+then we'll have to determine it.
+
+371
+00:23:23,168 --> 00:23:27,290
+And keeping the coarse align they will, this
+was a mission saving decision.
+
+372
+00:23:27,290 --> 00:23:32,810
+They will do a free return trajectory burn
+a few hours later, and will not even have
+
+373
+00:23:32,810 --> 00:23:39,429
+to attempt a platform star alignment for the
+precision abort burn at PC+2 after going around
+
+374
+00:23:39,429 --> 00:23:40,630
+the Moon.
+
+375
+00:23:40,630 --> 00:23:45,279
+After that, they’ll finally turn the LM
+inertial platform and the computer off, to
+
+376
+00:23:45,279 --> 00:23:47,169
+save LM power.
+
+377
+00:23:47,169 --> 00:23:50,420
+Now, they are still not out of the woods in
+terms of power.
+
+378
+00:23:50,420 --> 00:23:54,710
+They need to recharge their reentry battery
+A that had saved them earlier.
+
+379
+00:23:54,710 --> 00:24:00,809
+They will do it, thanks to a cable meant to
+recharge the LM batteries from the CM, and
+
+380
+00:24:00,809 --> 00:24:05,419
+a hacked procedure to use it in reverse, involving
+100’s of circuit breakers.
+
+381
+00:24:05,419 --> 00:24:12,870
+[John Aaron, EECOM] There was a normal process
+when you go into the moon, and coasting to
+
+382
+00:24:12,870 --> 00:24:18,610
+the Moon, that the command module supplied
+a little electrical power to the lunar module.
+
+383
+00:24:18,610 --> 00:24:25,070
+What you could do through a precarious route,
+is figure out some way to have that power
+
+384
+00:24:25,070 --> 00:24:26,870
+transfer come backwards.
+
+385
+00:24:26,870 --> 00:24:31,520
+Somehow we could arrange the circuitry, such
+that the only thing that you would be powering
+
+386
+00:24:31,520 --> 00:24:34,980
+inside the Command Module, out of all the
+hundreds and thousands of switches and circuit
+
+387
+00:24:34,980 --> 00:24:38,240
+breakers, was just this little thing called
+a battery charger.
+
+388
+00:24:38,240 --> 00:24:42,130
+And we sent the crew over this checklist,
+and they couldn't believe that we had devised
+
+389
+00:24:42,130 --> 00:24:46,030
+this little multi-page checklist, with hundreds
+of circuit breakers and switches and all that
+
+390
+00:24:46,030 --> 00:24:49,780
+on it, to actually get to the battery charger.
+
+391
+00:24:49,780 --> 00:24:50,780
+But it worked!
+
+392
+00:24:50,780 --> 00:24:56,590
+[Marc] Alright, you are now Apollo spacecraft
+power system experts, and should be able to
+
+393
+00:24:56,590 --> 00:25:03,049
+follow the raw Apollo 13 accident audio, which
+is the best 2-1/2 hour customer service support
+
+394
+00:25:03,049 --> 00:25:04,789
+call you’ll ever hear.
+
+395
+00:25:04,789 --> 00:25:07,559
+I’ll link it in the doodly-doo.
+
+396
+00:25:07,559 --> 00:25:11,610
+But let’s get back to opening our inverter,
+which was supposed to be the focus of the
+
+397
+00:25:11,610 --> 00:25:12,610
+video.
+
+398
+00:25:12,610 --> 00:25:15,220
+I know, we got sidetracked a bit…
+
+399
+00:25:15,220 --> 00:25:17,550
+[Marc] And this one, you identified?
+
+400
+00:25:17,550 --> 00:25:23,670
+[Mike] Yeah, it has written on the side here:
+"B/P 14 use only".
+
+401
+00:25:23,670 --> 00:25:33,830
+B/P 14, boilerplate 14, was the North American
+house spacecraft.
+
+402
+00:25:33,830 --> 00:25:40,720
+So this was the spacecraft that they had in
+their Downey plant, that they did essentially
+
+403
+00:25:40,720 --> 00:25:42,200
+all their integration testing on.
+
+404
+00:25:42,200 --> 00:25:47,150
+Block 2 is very similar from the specification
+control drawings we got.
+
+405
+00:25:47,150 --> 00:25:56,310
+It looks like they may have combined all of
+these studs into circular connectors for Block 2.
+
+406
+00:25:56,310 --> 00:26:00,940
+You can see, it was laying on the floor of
+the capsule, it has the angle.
+
+407
+00:26:00,940 --> 00:26:03,779
+So, laying upside down.
+
+408
+00:26:03,779 --> 00:26:08,870
+The three inverters were wedged under the
+communications equipment, and had to conform
+
+409
+00:26:08,870 --> 00:26:12,809
+to the curved edge of the heat shield, laying
+upside down.
+
+410
+00:26:12,809 --> 00:26:17,740
+And somebody apparently had that in his aircraft
+or something.
+
+411
+00:26:17,740 --> 00:26:24,440
+And they had put goop on it, and there were
+some stuff that is not original.
+
+412
+00:26:24,440 --> 00:26:25,440
+We cleaned it up.
+
+413
+00:26:25,440 --> 00:26:31,029
+So it sat on a hot plate - on a hot plate
+- on a cold plate over here!
+
+414
+00:26:31,029 --> 00:26:34,410
+Which has a leak in it, it has a patch on
+the other side.
+
+415
+00:26:34,410 --> 00:26:43,299
+And there is this really heavy copperish material,
+that's supposed to be in between the two.
+
+416
+00:26:43,299 --> 00:26:49,600
+But somebody had added some goop on it, which
+shouldn't be, of course, in a spaceship.
+
+417
+00:26:49,600 --> 00:26:52,360
+So we removed it as best as we could.
+
+418
+00:26:52,360 --> 00:26:55,779
+So, this one has seen some amateur use.
+
+419
+00:26:55,779 --> 00:27:00,840
+But it's a cool thing to have in your aircraft!
+
+420
+00:27:00,840 --> 00:27:02,960
+Yeah, we don't know what's in there.
+
+421
+00:27:02,960 --> 00:27:09,084
+There was a screw missing, there's some stuff
+that doesn't belong.
+
+422
+00:27:09,084 --> 00:27:12,490
+So we're going to look at this stuff in there.
+
+423
+00:27:12,490 --> 00:27:15,309
+Right away there was something cheesy with
+that unit.
+
+424
+00:27:15,309 --> 00:27:20,460
+Screws were missing, nuts were heard falling
+inside, and we spied some strange looking
+
+425
+00:27:20,460 --> 00:27:21,460
+material.
+
+426
+00:27:21,460 --> 00:27:27,929
+So we took the Depstek endoscope, and got
+greeted by strange stuff that did not look
+
+427
+00:27:27,929 --> 00:27:28,929
+quite right.
+
+428
+00:27:28,929 --> 00:27:30,029
+[Marc] A mouse!
+
+429
+00:27:30,029 --> 00:27:32,980
+[Eric] Almost looks like it, but it's not.
+
+430
+00:27:32,980 --> 00:27:35,470
+[Marc] So it doesn't look pretty inside.
+
+431
+00:27:35,470 --> 00:27:37,490
+I'm not sure if it's asbestos-y.
+
+432
+00:27:37,490 --> 00:27:40,570
+Why would you put that in there?
+
+433
+00:27:40,570 --> 00:27:46,680
+From then on, our voices will be a bit muffled,
+because we all put on N95 masks.
+
+434
+00:27:46,680 --> 00:27:50,030
+And it turned out to be a good decision.
+
+435
+00:27:50,030 --> 00:27:53,320
+The screws or whatever was welded at the bottom,
+just..
+
+436
+00:27:53,320 --> 00:27:54,400
+some of them went loose.
+
+437
+00:27:54,400 --> 00:27:57,970
+So this has had a tough life.
+
+438
+00:27:57,970 --> 00:28:01,960
+That's the weirdest piece of Apollo equipment
+we ever opened up.
+
+439
+00:28:01,960 --> 00:28:05,409
+It's filled with this crap.
+
+440
+00:28:05,409 --> 00:28:09,440
+That would be an insulator.
+
+441
+00:28:09,440 --> 00:28:11,840
+It's very very light.
+
+442
+00:28:11,840 --> 00:28:15,029
+Yeah, I think you're right, it's - how do
+you call it?
+
+443
+00:28:15,029 --> 00:28:16,029
+[Eric] Vermiculite.
+
+444
+00:28:16,029 --> 00:28:17,029
+[Mike] Yeah.
+
+445
+00:28:17,029 --> 00:28:21,270
+[Marc] Oh no, someone filled the thing with
+vermiculite.
+
+446
+00:28:21,270 --> 00:28:25,769
+This was a test unit, so it was not potted,
+and therefore you were not supposed to fly
+
+447
+00:28:25,769 --> 00:28:26,769
+it.
+
+448
+00:28:26,769 --> 00:28:31,390
+So probably the person that used it in his
+airplane thought it would be a brilliant idea
+
+449
+00:28:31,390 --> 00:28:33,840
+to pot it with vermiculite.
+
+450
+00:28:33,840 --> 00:28:36,770
+Which is very light and insulating.
+
+451
+00:28:36,770 --> 00:28:41,720
+In fact, being an incredibly good thermal
+insulator, it is just about the last thing
+
+452
+00:28:41,720 --> 00:28:44,690
+you’d want to fill a power supply with.
+
+453
+00:28:44,690 --> 00:28:47,409
+And to top it off, it’s extremely toxic.
+
+454
+00:28:47,409 --> 00:28:52,289
+Vermiculite is laced with the most deadly
+form of asbestos.
+
+455
+00:28:52,289 --> 00:28:57,424
+Good thing we put our N95 masks on, but we
+might still have gotten some of it.
+
+456
+00:29:04,150 --> 00:29:08,990
+Okay, so we're back at the inverter, the deadly
+asbestos contaminated inverter.
+
+457
+00:29:08,990 --> 00:29:13,280
+Should be fairly clean, but we masked up just
+in case.
+
+458
+00:29:13,280 --> 00:29:19,520
+Well, should be fairly clean, I'm sure there's
+tons of particles coming out of it still.
+
+459
+00:29:19,520 --> 00:29:21,080
+It's a little sketch.
+
+460
+00:29:21,080 --> 00:29:30,789
+So you see, this is the 28 volt input, and
+it's yay far from the from the heatsink or
+
+461
+00:29:30,789 --> 00:29:33,460
+the holder of that cap over here.
+
+462
+00:29:33,460 --> 00:29:36,488
+This is very tight.
+
+463
+00:29:36,488 --> 00:29:45,500
+There's another point you can see over here
+that is super tight.
+
+464
+00:29:45,500 --> 00:29:48,200
+I saw another one that...
+
+465
+00:29:48,200 --> 00:29:50,310
+Yeah, I bent that one up, because it was so
+close, I put it up.
+
+466
+00:29:50,310 --> 00:29:58,760
+So it's a little sketch, you have three of
+the same thing here.
+
+467
+00:29:58,760 --> 00:30:02,150
+These guys are actually not transistors, they
+are diodes.
+
+468
+00:30:02,150 --> 00:30:07,200
+They only have two connections to it, this
+one is left floating, and this is true for
+
+469
+00:30:07,200 --> 00:30:14,550
+a lot of them, so that's on purpose.
+
+470
+00:30:14,550 --> 00:30:18,150
+We will have a lot of capacitors to check.
+
+471
+00:30:18,150 --> 00:30:21,730
+Plenty plenty plenty plenty plenty.
+
+472
+00:30:21,730 --> 00:30:25,510
+100 micro.
+
+473
+00:30:25,510 --> 00:30:30,320
+Lots of caps on this side.
+
+474
+00:30:30,320 --> 00:30:34,649
+Oh that's an SCR.
+
+475
+00:30:34,649 --> 00:30:40,049
+That is the main inverter.
+
+476
+00:30:40,049 --> 00:30:41,790
+Lots of transformers of course.
+
+477
+00:30:41,790 --> 00:30:44,169
+There's a huge one in the middle.
+
+478
+00:30:44,169 --> 00:30:50,049
+Underneath here, I think, that's a big transformer.
+
+479
+00:30:50,049 --> 00:30:52,980
+Some more out here.
+
+480
+00:30:52,980 --> 00:30:57,050
+A bit of a scary monster, that is.
+
+481
+00:30:57,050 --> 00:31:01,529
+We cleaned it off the best we could, but this
+unit is just too contaminated for us to work
+
+482
+00:31:01,529 --> 00:31:02,720
+on it.
+
+483
+00:31:02,720 --> 00:31:07,160
+To make things worse, there were obvious signs
+of corrosion.
+
+484
+00:31:07,160 --> 00:31:11,000
+We don’t have the schematics, but we have
+a good block diagram and a short description
+
+485
+00:31:11,000 --> 00:31:12,000
+of how it works.
+
+486
+00:31:12,000 --> 00:31:20,669
+It’s all solid state, they use thyristors,
+or SCRs, a buck converter, and magnetic amplifiers.
+
+487
+00:31:20,669 --> 00:31:25,980
+The final upvoltage conversion is done by
+rotating magnetic fields in a specially wound
+
+488
+00:31:25,980 --> 00:31:33,919
+transformer to create an efficient power unit,
+although very heavy due all the magnetics.
+
+489
+00:31:33,919 --> 00:31:36,559
+We went as far as testing a few capacitors.
+
+490
+00:31:36,559 --> 00:31:41,429
+We can’t really work on repairing this unit,
+since it’s too contaminated.
+
+491
+00:31:41,429 --> 00:31:45,130
+One bad capacitor, and that would be the end
+of it.
+
+492
+00:31:45,130 --> 00:31:52,070
+[Marc] Testing the caps in circuit, I guess,
+will be the only thing we can do.
+
+493
+00:31:52,070 --> 00:31:53,690
+[Mike] Yeah.
+
+494
+00:31:53,690 --> 00:31:58,820
+[Marc] I bent it up because this was like
+a fraction of a millimeter.
+
+495
+00:31:58,820 --> 00:32:01,850
+[Mike] Man, Block 1!
+
+496
+00:32:01,850 --> 00:32:07,184
+[Marc] So, my idea was just, check a few caps.
+
+497
+00:32:07,184 --> 00:32:09,351
+3.8 microfarad!
+
+498
+00:32:09,351 --> 00:32:12,499
+That starts good.
+
+499
+00:32:12,499 --> 00:32:14,720
+3.8, okay.
+
+500
+00:32:14,720 --> 00:32:18,980
+12 microfarad, so that looks okay.
+
+501
+00:32:18,980 --> 00:32:27,729
+100 microfarads, 92 microfarads, well that's
+pretty good I would say.
+
+502
+00:32:27,729 --> 00:32:30,000
+550 microfarad!
+
+503
+00:32:30,000 --> 00:32:31,820
+What's up?
+
+504
+00:32:32,640 --> 00:32:36,050
+Some with too much capacitance?
+
+505
+00:32:36,050 --> 00:32:38,982
+Should we complain about it?
+
+506
+00:32:38,982 --> 00:32:46,160
+47, well they're all reasonably capacitive.
+
+507
+00:32:46,160 --> 00:32:48,279
+[Mike] hmm-hm.
+
+508
+00:32:48,279 --> 00:32:51,667
+[Marc] 34, 36, and 35.
+
+509
+00:32:51,667 --> 00:32:56,376
+So man, looks reasonable to me.
+
+510
+00:32:56,376 --> 00:33:02,771
+Okay, so the ones that are spot checkable,
+check okay.
+
+511
+00:33:02,771 --> 00:33:04,109
+Over here, some over there.
+
+512
+00:33:04,109 --> 00:33:06,000
+It's full of caps basically.
+
+513
+00:33:06,000 --> 00:33:07,000
+[Mike] Yes.
+
+514
+00:33:07,872 --> 00:33:10,950
+[Marc] 2.5 microfarads on the dot.
+
+515
+00:33:10,950 --> 00:33:16,259
+[Mike] Yeah, 60 MFD.
+
+516
+00:33:16,259 --> 00:33:24,904
+[Marc] This big fellow reads 2.5 micro, but
+it's written 68 on it. Hmm.
+
+517
+00:33:24,904 --> 00:33:29,220
+So I got the end out of it, so we can test
+it out of circuit.
+
+518
+00:33:29,220 --> 00:33:36,000
+6 - no, 65 nanofarads.
+
+519
+00:33:36,472 --> 00:33:39,523
+Oh that's bad.
+
+520
+00:33:39,808 --> 00:33:43,799
+This one looks like it's a capacitor no more.
+
+521
+00:33:43,799 --> 00:33:54,170
+Yeah, so, the 1.8 microfarad is from the connection
+it's attached to, and this one is not a capacitor anymore.
+
+522
+00:33:54,170 --> 00:34:00,059
+Okay, so, we have one bad one.
+
+523
+00:34:00,059 --> 00:34:03,819
+Which probably tells us, we just give up.
+
+524
+00:34:03,819 --> 00:34:05,579
+[Mike] Yep.
+
+525
+00:34:05,579 --> 00:34:09,020
+[Marc] 659 nanofarad.
+
+526
+00:34:09,020 --> 00:34:18,830
+So we have one example of one that died, which
+is one too many, right?
+
+527
+00:34:19,969 --> 00:34:23,382
+They are so many capacitors all over the place.
+
+528
+00:34:23,382 --> 00:34:24,992
+[Mike] Yeah.
+
+529
+00:34:24,993 --> 00:34:27,712
+[Marc] We pack it all back together.
+
+530
+00:34:27,712 --> 00:34:28,712
+[Mike] Return to sender!
+
+531
+00:34:28,712 --> 00:34:29,712
+[Marc] We send it back.
+
+532
+00:34:29,712 --> 00:34:36,935
+Oh dang, I would have wanted to give it a
+try, but it's not in working order.
+
+533
+00:34:36,935 --> 00:34:41,985
+[Mike] I'd be really curious to see what a
+Block 2 inverter looks like on the inside,
+
+534
+00:34:41,985 --> 00:34:44,959
+considering they didn't change the part number.
+
+535
+00:34:44,960 --> 00:34:48,179
+They changed the dash number, but not the
+part number.
+
+536
+00:34:48,179 --> 00:34:51,119
+[Marc] I'm being nice to the next owner of
+this.
+
+537
+00:34:51,996 --> 00:34:55,056
+I'm making sure I put some tape.
+
+538
+00:34:55,056 --> 00:34:56,874
+It's cloth tape.
+
+539
+00:34:56,875 --> 00:35:01,320
+It's period correct, from teletype, it's just
+the wrong color.
+
+540
+00:35:01,320 --> 00:35:07,599
+And places where there was stuff that could
+be come in contact with the top cover.
+
+541
+00:35:07,599 --> 00:35:11,222
+And our dodgy one behind the 28 volt input.
+
+542
+00:35:11,222 --> 00:35:17,180
+So if somebody tries to fire it up, at least
+you won't have these short circuits.
+
+543
+00:35:17,180 --> 00:35:26,200
+So it's all buttoned up, and Eric, who did
+the bottom part of the cold plate, is reassembling it.
+
+544
+00:35:26,200 --> 00:35:32,580
+But that's it, bye bye inverter, I don't think
+we'll power it up.
+
+545
+00:35:32,580 --> 00:35:37,240
+So we sealed it up in plastic bags and will
+not touch it again, and had to take few days
+
+546
+00:35:37,240 --> 00:35:40,670
+off to wash every surface in the lab.
+
+547
+00:35:40,670 --> 00:35:45,730
+At least it taught us a bit about the command
+module power system, and the incredible adventure
+
+548
+00:35:45,730 --> 00:35:47,290
+of Apollo 13.
+
+549
+00:35:47,290 --> 00:35:52,410
+So, don’t use collectible Apollo inverters
+in your aircrafts, unless you have a team
+
+550
+00:35:52,410 --> 00:35:59,215
+of crack ground controllers to get your back,
+and see you in the next episode!
+
